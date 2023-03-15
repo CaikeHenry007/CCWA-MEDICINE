@@ -1,0 +1,109 @@
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #8BFFBC; background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#FFFFFF));
+ 
+}
+
+.main{
+  display: flex;
+  width: 1920px;
+  float: center;
+  position: relative;
+}
+
+.cabecalho {
+  width: 1920px;
+  height: 21px;
+}
+
+.logo{
+    width: 300px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+.cliente{
+   width: 250px; 
+    margin-left: auto;
+    margin-right: auto;
+  position: absolute;
+  left: 10%;
+ }
+.client{
+    width: 100px; 
+    margin-left: 160px;
+    margin-right: auto;
+ }
+.casinha ul li{
+list-style-type: none;
+  padding: 10px;
+  float: left;
+  width: 90%;
+  background-color: #00000;
+  list-style: none;
+
+}
+.busca{
+   width: 650px; 
+    margin-left: 500px;
+    margin-right: 500px;
+    display: absolute;
+  float: center;
+  position: absolute;
+  left: 7%;
+  list-style: none;
+
+}
+.busca input{
+  height: 35px;
+  width: 680px;
+  margin-top: 25px;
+  background-position: 12px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding:12px ;
+  float: center;
+  display: flex;
+  position: relative;
+}
+.volta ul li{
+  list-style-type: none;
+  align: left;
+  position: absolute;
+  right: 80%;
+  
+  
+}
+.volta{
+ align: right;
+  float: right;
+  position: absolute;
+  right: 2%;
+  
+}
+.casinha{
+  align: left;
+  float: left;
+  
+}
+
+.casinha ul li a{
+  display: inline-block;
+  text-decoration: none;
+}
+.prosseguir {
+  height: 35px;
+  width: 280px;
+  margin-top: 25px;
+  background-position: 12px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding:12px ;
+  float: center;
+  background-color: #8fffbc;
+  position: absolute;
+  left: 46%;
+  
+}
