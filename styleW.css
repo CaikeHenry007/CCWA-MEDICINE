@@ -1,0 +1,228 @@
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  
+}
+
+ul{
+  padding: 0px!important;
+  
+}
+
+main{
+  width: 1920px;
+  float: left;
+  position: relative;
+  
+}
+
+.cabecalho {
+  width: 1920px;
+  background-color: #8BFFBC; background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#E2FFEE));
+  height: 215px;
+  
+}
+
+.logo{
+  float: left;
+  padding: 20px;
+  width: 84%;
+  
+}
+
+.login ul li{
+  margin-left: 10px;
+  display: inline-block;
+  float: left;
+  
+}
+
+.login{
+  padding: 30px;
+  
+}
+
+.menu{
+  background-color: #E2FFEE; background: -webkit-gradient(linear, left top, left bottom, from(#E2FFEE), to(#ffffff));
+  width: 1920px;
+  margin: 0 auto;
+  height: 100px;
+  
+}
+
+.itens ul li{
+  display: inline-block;
+  color: #8f8f8f;
+  font-size: 20px;
+  margin-right: 10px;
+  
+}
+
+.itens ul li a:hover{
+  color: #00c2db;
+  border-bottom: 2px solid #00c2db;
+}
+
+.itens ul li a{
+  color: #8f8f8f;
+  text-decoration: none;
+  padding: 20px;
+  
+}
+
+.itens{
+  width: 50%;
+  float: left;
+  margin-top: 12px;
+  
+}
+
+.busca{
+  text-align: center;
+  width: 50%;
+  float: right;
+  
+}
+
+.busca input{
+  background-image: url(Lupa.png);
+  background-repeat: no-repeat;
+  height: 35px;
+  width: 880px;
+  margin-top: 25px;
+  padding: 12px;
+  background-position: 99%;
+  border: 1px solid #8f8f8f;
+  border-radius: 10px;
+  
+}
+
+.tela inteira{
+  width: 100%;
+  float: left;
+  position: relative;
+  
+}
+
+.configs menu{
+  height: 100px;
+  
+}
+
+.endereco{
+  background-color: #FFFFFF;
+  height: 25px;
+  border-bottom: 8px solid #D7D4D4;
+  
+}
+
+.informacoes{
+  float: left;
+  font-size: 20px;
+  padding: 20px;
+  margin-top: -1%;
+  
+}
+
+.tell{
+  margin-top: 4px;
+  position: absolute;
+  
+}
+
+.loc{
+  margin-top: 3px;
+  position: absolute;
+  
+}
+
+.ccwa{
+  font-size: 32px;
+  margin-left: 66px;
+}
+.oq{
+  font-size: 32px;
+  margin-left: 145px;
+  position: absolute;
+  top: 30px;
+}
+
+.cadastro{
+  font-size: 20px;
+  position: absolute;
+  left: 1638;
+  color: #000000;
+  text-decoration: none;
+  
+}
+.entre{
+  font-size: 20px;
+  margin-top: 60%;
+  color: #000000;
+  
+}
+
+.entre ul li a{
+  text-decoration: none;
+  
+}
+
+.cadastro:hover{
+  color: #00c2db;
+  
+}
+
+.entre:hover{
+  color: #00c2db;
+  
+}
+
+.linha ul li a{
+  text-decoration: none;
+}
+
+.mulher{
+  float: left;
+  width: 25%
+}
+.planos{
+  height: 508px;
+  width: 336px;
+  background-color: #C4FBDA;
+  border-color: #C4FBDA;
+  border-radius: 20px;
+  font-size: 32;
+}
+
+.consultas{
+  height: 508px;
+  width: 336px;
+  background-color: #A0FFC6;
+  border-color: #A0FFC6;
+  border-radius: 20px;
+  font-size: 32;
+}
+
+.atendimentos{
+  height: 508px;
+  width: 336px;
+  background-color: #8BFFBA;
+  border-color: #8BFFBA;
+  border-radius: 20px;
+  font-size: 32;
+}
+
+.testes{
+  height: 508px;
+  width: 336px;
+  background-color: #4BFF94;
+  border-color: #4BFF94;
+  border-radius: 20px;
+  font-size: 32;
+}
+.botoes{
+  float: right;
+  padding: 30px;
+  margin-top: -50px
+}
