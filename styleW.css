@@ -86,7 +86,7 @@ main{
 }
 
 .busca input{
-  background-image: url(Lupa.png);
+  background-image: url(/InicioImg/Lupa.png);
   background-repeat: no-repeat;
   height: 35px;
   width: 880px;
@@ -225,4 +225,9 @@ main{
   float: right;
   padding: 30px;
   margin-top: -50px
+}
+
+button:hover {
+  background-color: #70b28b;
+  color:white;
 }
