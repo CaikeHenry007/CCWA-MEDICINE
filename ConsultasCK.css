@@ -50,7 +50,7 @@ ul{
  color: #868686; 
  position: absolute;
  left: 70%;
- align: 70%; 
+ text-align: 70%; 
  
 }
 
@@ -245,4 +245,3 @@ ul{
   left: 60%;
   
 }
-
