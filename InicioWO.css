@@ -1,92 +1,80 @@
-body{
+body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  
 }
 
-ul{
+ul {
   padding: 0px!important;
-  
 }
 
-main{
+main {
   width: 1920px;
   float: left;
   position: relative;
-  
 }
 
 .cabecalho {
   width: 1920px;
   background-color: #8BFFBC; background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#E2FFEE));
   height: 215px;
-  
 }
 
-.logo{
+.logo {
   float: left;
   padding: 20px;
   width: 84%;
-  
 }
 
-.login ul li{
+.login ul li {
   margin-left: 10px;
   display: inline-block;
   float: left;
-  
 }
 
-.login{
+.login {
   padding: 30px;
-  
 }
 
-.menu{
+.menu {
   background-color: #E2FFEE; background: -webkit-gradient(linear, left top, left bottom, from(#E2FFEE), to(#ffffff));
   width: 1920px;
   margin: 0 auto;
   height: 100px;
-  
 }
 
-.itens ul li{
+.itens ul li {
   display: inline-block;
   color: #8f8f8f;
   font-size: 20px;
   margin-right: 10px;
-  
 }
 
-.itens ul li a:hover{
+.itens ul li a:hover {
   color: #00c2db;
   border-bottom: 2px solid #00c2db;
 }
 
-.itens ul li a{
+.itens ul li a {
   color: #8f8f8f;
   text-decoration: none;
   padding: 20px;
-  
 }
 
-.itens{
+.itens {
   width: 50%;
   float: left;
   margin-top: 12px;
-  
 }
 
-.busca{
+.busca {
   text-align: center;
   width: 50%;
   float: right;
-  
 }
 
-.busca input{
-  background-image: url(/InicioImg/Lupa.png);
+.busca input {
+  background-image: url(/InicioImgWO/Lupa.png);
   background-repeat: no-repeat;
   height: 35px;
   width: 880px;
@@ -95,29 +83,27 @@ main{
   background-position: 99%;
   border: 1px solid #8f8f8f;
   border-radius: 10px;
-  
 }
 
-.tela inteira{
+.tela inteira {
   width: 100%;
   float: left;
   position: relative;
-  
 }
 
-.configs menu{
+.configs menu {
   height: 100px;
   
 }
 
-.endereco{
+.endereco {
   background-color: #FFFFFF;
   height: 25px;
   border-bottom: 8px solid #D7D4D4;
   
 }
 
-.informacoes{
+.informacoes {
   float: left;
   font-size: 20px;
   padding: 20px;
@@ -125,7 +111,7 @@ main{
   
 }
 
-.tell{
+.tell {
   margin-top: 4px;
   position: absolute;
   
@@ -137,56 +123,55 @@ main{
   
 }
 
-.ccwa{
+.ccwa {
   font-size: 32px;
   margin-left: 66px;
 }
-.oq{
+.oq {
   font-size: 32px;
   margin-left: 145px;
   position: absolute;
   top: 30px;
 }
 
-.cadastro{
+.cadastro {
   font-size: 20px;
   position: absolute;
   left: 1638;
   color: #000000;
   text-decoration: none;
-  
 }
-.entre{
+
+.entre {
   font-size: 20px;
   margin-top: 60%;
-  color: #000000;
-  
+  color: #000000; 
 }
 
-.entre ul li a{
+.entre ul li a {
   text-decoration: none;
-  
 }
 
-.cadastro:hover{
+.cadastro:hover {
   color: #00c2db;
   
 }
 
-.entre:hover{
+.entre:hover {
   color: #00c2db;
   
 }
 
-.linha ul li a{
+.linha ul li a {
   text-decoration: none;
 }
 
-.mulher{
+.mulher {
   float: left;
   width: 25%
 }
-.planos{
+
+.planos {
   height: 508px;
   width: 336px;
   background-color: #C4FBDA;
@@ -195,7 +180,7 @@ main{
   font-size: 32;
 }
 
-.consultas{
+.consultas {
   height: 508px;
   width: 336px;
   background-color: #A0FFC6;
@@ -204,7 +189,7 @@ main{
   font-size: 32;
 }
 
-.atendimentos{
+.atendimentos {
   height: 508px;
   width: 336px;
   background-color: #8BFFBA;
@@ -213,7 +198,7 @@ main{
   font-size: 32;
 }
 
-.testes{
+.testes {
   height: 508px;
   width: 336px;
   background-color: #4BFF94;
@@ -221,7 +206,8 @@ main{
   border-radius: 20px;
   font-size: 32;
 }
-.botoes{
+
+.botoes {
   float: right;
   padding: 30px;
   margin-top: -50px
