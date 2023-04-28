@@ -1,12 +1,11 @@
-body{
+body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   background-color: #8BFFBC; background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#FFFFFF));
- 
 }
 
-.main{
+.main {
   display: flex;
   width: 1920px;
   float: center;
@@ -18,48 +17,50 @@ body{
   height: 21px;
 }
 
-.logo{
-    width: 300px; 
-    margin-left: auto;
-    margin-right: auto;
-    padding: 50px;
-    center: left;
-
+.logo {
+  width: 300px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  align-items: left;
 }
-.cliente{
-   width: 250px; 
-    margin-left: auto;
-    margin-right: auto;
+
+.cliente {
+  width: 250px; 
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   left: 50%;
   margin-top: -2%;
- }
-.client{
-    width: 100px; 
-    margin-left: 160px;
-    margin-right: auto;
- }
-.casinha ul li{
-list-style-type: none;
+}
+
+.client {
+  width: 100px; 
+  margin-left: 160px;
+  margin-right: auto;
+}
+
+.casinha ul li {
+  list-style-type: none;
   padding: 10px;
   float: left;
   width: 90%;
   background-color: #000000;
   list-style: none;
-
 }
-.busca{
-   width: 650px; 
-    margin-right: 500px;
-    margin-left: -250px;
-    display: absolute;
+
+.busca {
+  width: 650px; 
+  margin-right: 500px;
+  margin-left: -250px;
+  display: absolute;
   float: center;
   position: absolute;
   left: 7%;
   list-style: none;
-
 }
-.busca input{
+
+.busca input {
   height: 35px;
   width: 680px;
   margin-top: 25px;
@@ -71,31 +72,31 @@ list-style-type: none;
   display: flex;
   position: relative;
 }
-.volta ul li{
+
+.volta ul li {
   list-style-type: none;
-  align: left;
+  align-items: left;
   position: absolute;
   right: 80%;
-  
-  
 }
-.volta{
- align: right;
+
+.volta {
+  align-items: right;
   float: right;
   position: absolute;
   right: 2%;
-  
-}
-.casinha{
-  align: left;
-  float: left;
-  
 }
 
-.casinha ul li a{
+.casinha {
+  align-items: left;
+  float: left;
+}
+
+.casinha ul li a {
   display: inline-block;
   text-decoration: none;
 }
+
 .prosseguir {
   height: 35px;
   width: 280px;
@@ -108,5 +109,4 @@ list-style-type: none;
   background-color: #8fffbc;
   position: absolute;
   left: 46%;
-  
 }
