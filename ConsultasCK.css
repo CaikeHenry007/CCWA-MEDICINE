@@ -1,5 +1,5 @@
 body{
-  width: 100%;
+  width: 50%;
   height: 100%;
   margin: 0 auto;
   background-color: #8BFFBC; background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#FFFFFF));
@@ -13,15 +13,15 @@ ul{
 
 .casamenu ul li{
   display: inline-block;
-  width: 24px;
+  width: 124px;
   height: 25px;
 }
 .casamenu{
   width: 20%;
   padding: 0px; 
-  float: left;
   margin-left: -330px;
   position: absolute;
+  left: 19%;
   
 }
 
@@ -45,7 +45,7 @@ ul{
 }
 
 .pergunta{
- width: 100%;
+ width: 30%;
  height: 200px;
  color: #868686; 
  position: absolute;
