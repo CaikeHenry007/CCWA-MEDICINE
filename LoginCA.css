@@ -75,7 +75,12 @@ margin-left: 830px;
   height: 40px;
   margin-left: 850px;
   border-radius: 20px;
- background-color: #8BFFBC;
+  border: 1px solid #85e9ad;
+ background-color: #8fFFBC;
+}
+
+.buttao:hover{
+  background-color: #7ad89f;
 }
 
 .esquecer{
