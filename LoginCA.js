@@ -1,9 +1,9 @@
 
-function login(){
-    var login = document.getElementById('login').value;
-    var senha = document.getElementById('senha').value;
+function Prosseguir(){
+    var Email = document.getElementById('Email').value;
+    var Senha = document.getElementById('Senha').value;
 
-    if(login == "anajulia2023@gmail.com" && senha == "12345"){
+    if(Email == "anajulia2023@gmail.com" && Senha == "12345"){
         alert('Você foi logado com sucesso');
         location.href = "./Login Conectado/Exemplo.html";
     }else{
