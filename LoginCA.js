@@ -5,7 +5,7 @@ function login(){
 
     if(login == "anajulia2023@gmail.com" && senha == "12345"){
         alert('Você foi logado com sucesso');
-        location.href = "./InicioWO.html";
+        location.href = "./Login Conectado/Exemplo.html";
     }else{
 alert('Usuário ou senha incorretos');
     }
