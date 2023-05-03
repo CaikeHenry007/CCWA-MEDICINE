@@ -1,50 +1,65 @@
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
-    <link href="LoginCA.css" rel="stylesheet" type="text/css" />
-    <title>CCWA Medicine</title>
-  </head>
 
-  <body>
-    <header>
-      <ul>
-        <a href="./InicioWO.html">
-          <img src="./LoginImgCA/Casa.png" />
-        </a>
-      </ul>
-    </header>
 
-    <main class="login">
-      <div>
-        <img src="./LoginImgCA/Logo.png" class="logoccwa">
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+  <link href="LoginCA.css" rel="stylesheet" type="text/css" />
+  <title>CCWA Medicine</title>
+</head>
 
-      <div class="cadastro">
-        <h1 class="texto"> Login do Cliente</h1>
+<body>
+  <header>
+    <ul>
+      <a href="https://CCWA-Medicine-Incial.wellingtonoli23.repl.co">
 
-        <h3 class="gmail"> *Email </h3>
+      </a>
+    </ul>
+  </header>
 
-        <input placeholder="Email" class="caixa-1">
 
-        <h3 class="senha"> *Senha </h3>
+  <ul>
+    <a href="./InicioWO.html">
+      <img src="./LoginImgCA/Casa.png" />
+    </a>
+  </ul>
 
-        <input placeholder="Senha" class="caixa-2" type="password">
-      </div>
+  <div class="login">
+    <div>
+      <img src="./LoginImgCA/Logo.png" class="logoccwa">
+    </div>
+  </div>
+  <div class="login">
 
-      <div class="botao">
-        <ul>
-          <a href="">
-            <h4 class="esquecer"> Esqueci Senha </h4>
-          </a>
-        </ul>
-        <a href="./Login Conectado/Exemplo.html">
-          <button class="buttao">
-            ENTRAR
-          </button>
-        </a>
-      </div>
-    </main>
-  </body>
+    <div>
+      <h1 class="texto"> Login do Cliente</h1>
+    </div>
+    <br>
+
+
+
+
+    <div class="CaixaEmailEsenha">
+      <form onsubmit="return validacao(event)">
+        <label> Digite seu Email:</label><br>
+        <input type="text" id="Email" placeholder="Email:"><br>
+
+
+        <label> Digite sua Senha:</label><br>
+        <input type="password" id="Senha" placeholder="Senha:">
+      </form>
+
+      <a href="">
+        <h4 class="esquecer"> Esqueci a senha</h4>
+      </a>
+      <input type="submit" onclick="Prosseguir(); return false" class="botprosseguir">
+    </div>
+
+    <script src="LoginCA.js"></script>
+
+
+</body>
+
 </html>
