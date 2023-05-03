@@ -42,38 +42,11 @@ ul{
   display: inline-block;
   float: left;
   list-style: none;
-  margin-left: 900px;
-  margin-top: -122px;
 }
 
 .login{
   padding: 15px 10px;
   float: right;
-}
-
-.linha{
-  float: right;
-  margin-right: 75px;
-  margin-top: 12px;
-
-}
-.linha ul li{
-  display: inline-block;
-  font-size: 16px;
-  font-family: Trebuchet MS, sans-serif;
-}
-
-.linha ul li a{
-  color: #000000;
-  text-decoration: none;
-}
-
-.cadastro:hover{
-  color: #00aeff;
-}
-
-.entre:hover{
-  color: #00aeff;
 }
 
 .menudois{
@@ -114,7 +87,7 @@ ul{
 }
 
 .busca input{
-  background-image: url(./InicioImgWO/Lupa.png);
+  background-image: url(./ImagemExemplo/Lupa.png);
   background-repeat: no-repeat;
   background-position: 99%;
   width: 440px;

@@ -1,11 +1,8 @@
 body {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
   background-color: #8BFFBC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#FFFFFF));
 }
-
 
 .login {
   text-align: center;
@@ -31,7 +28,6 @@ body {
 }
 
 
-
 #Senha {
   width: 40%;
   height: 40px;
@@ -44,11 +40,13 @@ body {
 .esquecer {
   font-size: 20px;
   width: 70%;
-  }
+}
 
 .botprosseguir {
   width: 170px;
   height: 40px;
+  margin-bottom: 10px;
   border-radius: 20px;
+  margin-top: 10px;
   background-color: #8BFFBC;
 }
