@@ -10,7 +10,7 @@ body{
   
   .casamenu ul li{
     display: inline-block;
-    width: 124px;
+    width: 74px;
     height: 25px;
   }
   .casamenu{
@@ -18,7 +18,9 @@ body{
     padding: 0px; 
     margin-left: -330px;
     position: absolute;
-    left: 19%;
+    left: 23%;
+    width: 74px;
+    margin-top: 17px;
     
   }
   
@@ -32,7 +34,7 @@ body{
   }
   
   .setaa{
-    width: 30px;
+    width: 20px;
     height: 20px;
     padding: 0px;
     position: absolute;
@@ -40,3 +42,12 @@ body{
   
   }
   
+  .pergunta{
+    width: 30%;
+    height: 200px;
+    color: #868686; 
+    position: absolute;
+    left: 70%;
+    text-align: 70%; 
+    
+   }
