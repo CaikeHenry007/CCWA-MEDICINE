@@ -42,7 +42,7 @@ footer{
 .casinha{
 	width: 7%;
 	position: absolute;
-	padding: 0px 7px;
+	padding: 10px 7px;
 
 }
 
@@ -50,13 +50,14 @@ footer{
 	width: 10%;
 	position: absolute;
 	margin-left: 72px;
+    padding: 10px 0px;
 }
 
 .produtos{
 	width: 20%;
 	position: absolute;
 	margin-left: 740px;
-	margin-top: 75px;
+	margin-top: 85px;
 }
 
 
