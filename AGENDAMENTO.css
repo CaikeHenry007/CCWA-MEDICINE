@@ -1,0 +1,149 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.barra-esquerda {
+    box-shadow: 2px 2px 2px 2px silver;
+    height: 100%;
+    width: 5%;
+    background-color: #8bffb8;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+.cabecalho {
+    background-color: silver;
+    width: 95%;
+    border-bottom: 2px solid #8bffb8;
+    position: absolute;
+    right: 0%;
+    top: 0px;
+
+    ;
+
+
+}
+
+#logo {
+    width: 210px;
+    height: 70px;
+    margin-left: 6px;
+    opacity: 100%;
+}
+
+
+#Agendar {
+    position: absolute;
+    margin-top: 7px;
+    left: 360px;
+    text-decoration: none;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    color: black;
+
+
+
+}
+
+#Agendar:hover {
+    color: #8bffb8;
+    border-bottom: 1px solid #8bffb8;
+    width: 150px;
+    text-align: center;
+
+
+
+}
+
+.escolha-data {
+    width: 100%;
+    border-bottom: 2px solid silver;
+    margin-top: 105px;
+    margin-left: 90px;
+    padding-left: 140px;
+    right: 0%;
+
+
+}
+
+#escolher-dia {
+    border-radius: solid 2px gray;
+    font-size: 35px;
+}
+
+.corpo-agenda {
+    margin-left: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid gray;
+
+}
+
+#casa-menu {
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 10px;
+    border-bottom: solid 2px silver;
+    padding-bottom: 10px;
+
+}
+
+#aguardo {
+    border: solid 2px gray;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 40px;
+    width: 90%;
+    position: absolute;
+    right: 1%;
+   border-left: 10px solid yellow;
+   border-radius: 12px;
+   background-color: silver;
+    
+    
+   
+   
+
+}
+
+.informacoes {
+    padding-left: 40px;
+    font-size: 25px;
+    }
+
+    .paciente-1 {
+        font-size: 20px;
+        padding-left: 50px;
+
+        
+
+    }
+
+
+    #agendado-2 {
+        border: solid 2px gray;
+        margin-left: 120px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-top: 180px;
+        width: 90%;
+        position: absolute;
+        right: 1%;
+       border-left: 10px solid green;
+       border-radius: 12px;
+       background-color: silver;
+
+    }
+
+    .paciente-2 {
+        font-size: 20px;
+        padding-left: 50px;
+    }
