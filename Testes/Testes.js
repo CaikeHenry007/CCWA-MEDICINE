@@ -1,4 +1,4 @@
-function procurar() {
+function procurar(){
     var id = document.getElementById('id').value;
     var teste = [
         { "id": "12345" }
@@ -7,10 +7,12 @@ function procurar() {
     redic = document.getElementById("redic");
 
     if (id == teste[0].id) {
-        redic.innerHTML = "Lote encontrado!";
+        redic.innerHTML = "ID encontrado redirecionando...";
     return redi();
-    } else {
-        redic.innerHTML = "Lote n encontrado!";
+    }
+    if (id != teste[0].id) {
+        redic.innerHTML = "ID não encontrado. Tente novamente!";
+        return testea();
     }
 }
 
@@ -18,3 +20,7 @@ function redi() {event.preventDefault();
     window.location.href="../Início/Início.html";
 }
 
+
+function testea() {event.preventDefault();
+    window.location.href="./index.html";
+}
