@@ -69,6 +69,65 @@ footer{
 
 /*Area usável*/
 
+button{
+	width: 350PX;
+    height: 60PX;
+    background-color: #8fffbc;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px #83e9ac;
+    padding: 0px 10px;
+    color: #000000;
+    font-size: 22px;
+	font-weight: bold;
+}
+
+button:hover{
+    background-color: #83e9ac;
+    box-shadow: 5px 5px #7ad89f;
+	transform: scale(1.05);
+	transition: all 0.5s;
+}
+
+.botao{
+	margin-left: 100px;
+	margin-top: 75px;
+}
+
+.outro{
+	background-image: url(./ImagensDoações/Outros.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-left: 15px;
+}
+
+.dinheiro{
+	background-image: url(./ImagensDoações/Dinheiro.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
+}
+.comida{
+	background-image: url(./ImagensDoações/Comida.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-left: 15px;
+}
+.roupa{
+	background-image: url(./ImagensDoações/Roupas.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
+}
+
 .logo-2{
     height: 150px;
     position: absolute;
@@ -76,7 +135,7 @@ footer{
 
 h2{
     position: absolute;
-    margin-left: 400px;
+    margin-left: 350px;
     font-size: 18px;
     text-align: justify;
     width: 42%;
