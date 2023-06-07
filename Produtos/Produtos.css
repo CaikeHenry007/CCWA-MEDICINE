@@ -92,6 +92,8 @@ footer{
 .card:hover{
 	background: #82e9ca;
 	background: linear-gradient(0deg, #82e9ca 0%, #f1f1f1 75%);
+	transform: scale(1.07);
+    transition: all 0.5s;
 }
 
 .remedios{
