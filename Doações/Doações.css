@@ -22,7 +22,7 @@ body{
 }
 main{
 	margin: 0 auto;
-	width: 1000px;
+	width: 1200px;
 	position: relative;
 }
 
@@ -42,21 +42,21 @@ footer{
 .casinha{
 	width: 7%;
 	position: absolute;
-	padding: 10px 7px;
-
+	padding: 10px 0px;
+	margin-left: -94px;
 }
 
 .logo{
 	width: 10%;
 	position: absolute;
-	margin-left: 72px;
+	margin-left: -22px;
     padding: 10px 0px;
 }
 
 .produtos{
 	width: 20%;
 	position: absolute;
-	margin-left: 740px;
+	margin-left: 900px;
 	margin-top: 85px;
 }
 
@@ -90,8 +90,9 @@ button:hover{
 }
 
 .botao{
-	margin-left: 100px;
+	margin-left: 135px;
 	margin-top: 75px;
+	width: 1000px;
 }
 
 .outro{
@@ -150,9 +151,12 @@ h4{
 .meio{
     width: 800px;
     margin-left: 75px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
+.everybody{
+	margin-left: 100px;
+}
 /*Fim Area usável*/
 
 /*Rodapé*/

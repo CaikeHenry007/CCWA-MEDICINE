@@ -22,7 +22,7 @@ body{
 }
 main{
 	margin: 0 auto;
-	width: 1000px;
+	width: 1200px;
 	position: relative;
 }
 
@@ -42,35 +42,37 @@ footer{
 .casinha{
 	width: 7%;
 	position: absolute;
-	padding: 10px 7px;
-
+	padding: 10px 0px;
+	margin-left: -94px;
 }
 
 .logo{
 	width: 10%;
 	position: absolute;
-	margin-left: 72px;
+	margin-left: -22px;
     padding: 10px 0px;
 }
 
 .produtos{
 	width: 20%;
 	position: absolute;
-	margin-left: 740px;
+	margin-left: 900px;
 	margin-top: 85px;
 }
 
 
 .orientaçao{
-	padding: 0px 30px 40px;
+	padding: 0px 10px 40px;
 }
 
 /*Fim Cabeçalho*/
+
 
 /*Area usável*/
 
 .container{
 	height: 1000px;
+	width: 1000px;
 	min-height: 75vh;
 	padding: 10px;
 	margin-left: 485px;
