@@ -48,7 +48,7 @@ main{
   text-align: center;
 }
 
-#Email {
+#email {
   width: 500px;
   height: 45px;
   border-radius: 15px;
@@ -59,7 +59,7 @@ main{
 }
 
 
-#Senha {
+#senha {
   width: 500px;
   height: 45px;
   border-radius: 15px;
@@ -92,6 +92,7 @@ select {
   margin-left: 355px;
   margin-top: 10px;
   color: #000000;
+  text-decoration: none;
 }
 
 .esquecer:hover {
@@ -102,12 +103,14 @@ select {
   display: flex;
   margin-left: 443px;
   margin-top: 5px;
+  text-decoration: none;
 }
 
 h2{
   font-size: 21px;
   color: #000000;
 }
+
 h3{
   font-size: 21px;
   margin-left: 10px;

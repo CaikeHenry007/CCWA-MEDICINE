@@ -1,66 +1,48 @@
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: #8BFFBC; background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#FFFFFF));
+/*Configurções padrão*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Alegreya Sans;
 }
 
-.main {
-    display: flex;
-    width: 1920px;
-    float: center;
-    position: relative;
+header{
+	margin: 0 auto;
 }
 
-.cabecalho {
-    width: 1920px;
-    height: 21px;
+body{
+	background-image: url(./ImagensCadastro/Fundo.png);
+
+}
+main{
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+}
+
+.casa{
+  padding: 10px;
+}
+
+.homenzinho {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
 }
 
 .logo {
-    width: 300px; 
-    margin-left: auto;
-    margin-right: auto;
-    padding: 50px;
-    align-items: left;
+  text-align: center;
 }
 
-.cliente {
-    width: 250px; 
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    left: 50%;
-    margin-top: -2%;
+.texto {
+  padding-top: 60px;
+  font-size: 40px;
 }
 
-.client {
-    width: 100px; 
-    margin-left: 160px;
-    margin-right: auto;
-}
-
-.casinha ul li {
-    list-style-type: none;
-    padding: 10px;
-    float: left;
-    width: 90%;
-    background-color: #000000;
-    list-style: none;
-}
-
-.busca {
-    width: 650px; 
-    margin-right: 500px;
-    margin-left: -250px;
-    display: absolute;
-    float: center;
-    position: absolute;
-    left: 7%;
-    list-style: none;
-}
-
-.busca input {
+#nome{
     height: 35px;
     width: 680px;
     margin-top: 25px;
@@ -73,29 +55,75 @@ body {
     position: relative;
 }
 
-.volta ul li {
-    list-style-type: none;
-    align-items: left;
-    position: absolute;
-    right: 80%;
+#cpf{
+    height: 35px;
+    width: 680px;
+    margin-top: 25px;
+    background-position: 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding:20px ;
+    float: center;
+    display: flex;
+    position: relative;
 }
 
-.volta {
-    align-items: right;
-    float: right;
-    position: absolute;
-    right: 2%;
+#telefone{
+    height: 35px;
+    width: 680px;
+    margin-top: 25px;
+    background-position: 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding:20px ;
+    float: center;
+    display: flex;
+    position: relative;
 }
 
-.casinha {
-    align-items: left;
-    float: left;
+#email{
+    height: 35px;
+    width: 680px;
+    margin-top: 25px;
+    background-position: 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding:20px ;
+    float: center;
+    display: flex;
+    position: relative;
 }
 
-.casinha ul li a {
-    display: inline-block;
-    text-decoration: none;
+#senha{
+    height: 35px;
+    width: 680px;
+    margin-top: 25px;
+    background-position: 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding:20px ;
+    float: center;
+    display: flex;
+    position: relative;
 }
+
+#senha-2{
+    height: 35px;
+    width: 680px;
+    margin-top: 25px;
+    background-position: 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding:20px ;
+    float: center;
+    display: flex;
+    position: relative;
+}
+
+
+
+
+
 
 .prosseguir {
     height: 35px;
@@ -109,8 +137,4 @@ body {
     background-color: #8fffbc;
     position: absolute;
     left: 46%;
-}
-
-.botoes {
-    margin-top: 700px;
 }

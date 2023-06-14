@@ -16,7 +16,7 @@
                         <img src="./ImagensLogin/Casinha.png" />
                     </a>
                 </ul>
-            </div><br><br><br><br>
+            </div><br><br>
         </header>
         <main>
             <div class="logo">
@@ -30,24 +30,25 @@
             <div class="CaixaEmailEsenha">
                 <form onsubmit="return validacao(event)">
                     <label class="legais">Email:</label><br>
-                    <input required="required" type="text" id="Email" placeholder="example@outlook.com"><br><br>
+                    <input required="required" type="text" id="email" placeholder="example@outlook.com"><br><br>
                     <label class="legais">Senha:</label><br>
-                    <input required="required" type="password" id="Senha" placeholder="*****"><br><br>
+                    <input required="required" type="password" id="senha" placeholder="*****"><br><br>
                     <label class="legais">Função:</label><br>
-                    <select name="linguagem" required="required">
+                    
+                    <select name="linguagem" required="required" id="escolher">
                         <option value="">Selecionar...</option>
                         <option>Paciente</option>
                         <option>Médico</option>
                         <option>Administrador</option>
-                    </select><br><br>
+                    </select><br>
                 </form>
 
-                <a href="">
+                <a href="" style="text-decoration: none;">
                     <h4 class="esquecer">Esqueci a senha</h4>
                 </a>
 
-                <input value="Entrar" type="submit" onclick="Prosseguir(); return false" class="botprosseguir">
-                <div class="cadeistro"><h2>Não tem cadastro?</h2><a href="../Cadastro/Cadastro.html"><h3>Cadastre-se</h3></a></div>
+                <input value="Entrar" type="submit" onclick="Funcao(); return false" class="botprosseguir">
+                <div class="cadeistro"><h2>Não tem cadastro?</h2><a href="../Cadastro/Cadastro.html" style="text-decoration: none;"><h3>Cadastre-se</h3></a></div>
             </div>
         </main>
     </body>
