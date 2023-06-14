@@ -1,247 +1,279 @@
+/*Configurções padrão*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Alegreya Sans;
+}
+
+header{
+	margin: 0 auto;
+  	width: 1000px;
+  	height: 175px;
+}
+
 body{
-  width: 50%;
-  height: 100%;
-  margin: 0 auto;
-  background-color: #8BFFBC; background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#FFFFFF));
- 
+	background: #8fffbc;
+	background: linear-gradient(180deg, #8fffbc 0%, #ffffff 100%);
+
+}
+main{
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
 }
 
-
-ul{
-  padding: 0px!important;
-  
+footer{
+	margin-top: 125px;
+	width: 100%;
+	height: 185px;
+	color:  #000000;
+	background-color: #eaeaea;
+	border: 2px solid #D9D9D9;
 }
 
-.casamenu ul li{
-  display: inline-block;
-  width: 124px;
-  height: 25px;
+h2{
+ 	font-size: 35px;
+	color: #868686;
 }
-.casamenu{
-  width: 20%;
-  padding: 0px; 
-  margin-left: -330px;
-  position: absolute;
-  left: 19%;
-  
+
+h3{
+	color: #868686;
+}
+
+/*Fim Configurções padrão*/
+
+/*Cabeçalho*/
+
+.casinha{
+	width: 7%;
+	position: absolute;
+	padding: 10px 0px;
+	margin-left: -94px;
 }
 
 .logo{
-  width: 80%;
-  height: 80px;
-  float: right;
-  padding: 20px;
-  margin-left: -80px;
-
-  
+	width: 10%;
+	position: absolute;
+	margin-left: -22px;
+    padding: 10px 0px;
 }
 
-.logoo{
-  width: 270px;
-  height: 100px;
-  padding: 0px;
-  position: absolute;
-  left: 80px;
-
+.consultas{
+	width: 20%;
+	position: absolute;
+	margin-left: 900px;
+	margin-top: 85px;
 }
 
-.pergunta{
- width: 30%;
- height: 200px;
- color: #868686; 
- position: absolute;
- left: 70%;
- text-align: 70%; 
- 
+
+.orientaçao{
+	padding: 0px 10px 40px;
+}
+
+
+/*Fim Cabeçalho*/
+
+
+button{
+  height: 55px;
+  width: 500px;
+  background-color: #8fffbc;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px #83e9ac;
+  padding: 0px 10px;
+  color: #000000;
+  font-size: 22px;
+	font-weight: bold;
+}
+
+button:hover{
+  background-color: #83e9ac;
+  box-shadow: 5px 5px #7ad89f;
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.tudoo{
+  margin-left: 50px;
+	margin-top: 75px;
+	width: 1200px;
+
+}
+.espaco{
+  padding: 0px 100px;
+}
+
+.btns-1{
+  display: flex;
+}
+
+.btns-2{
+  display: flex;
+}
+.btns-3{
+  display: flex;
+}
+
+.btns-4{
+  display: flex;
+}
+
+.btns-5{
+  display: flex;
+}
+
+.btns-6{
+  display: flex;
 }
 
 .cardiologista{
-  height: 50px;
-  width: 500px;
-  margin-top: -200px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 20%;
+  background-image: url(./ImagensConsultas/Coração.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 }
 
 .dermatologista{
-  height: 50px;
-  width: 500px;
-  margin-top: -80px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  float: center;
-  border-radius: 20px;
-  padding:12px ;
-  display: flex;
-  position: absolute;
-  left: 20%;
+  background-image: url(./ImagensConsultas/Pelo.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 
 }
 
 .otorrinolaringologista{
-    height: 50px;
-  width: 500px;
-  margin-top: 40px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 20%;
+  background-image: url(./ImagensConsultas/Garganta.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 
 }
 
 .urologista{
-    height: 50px;
-  width: 500px;
-  margin-top: 160px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 20%;
+  background-image: url(./ImagensConsultas/Homen.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 
 }
 
 .ginecologista{
-    height: 50px;
-  width: 500px;
-  margin-top: 280px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 20%;
-
+  background-image: url(./ImagensConsultas/Mulher.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 }
 
 .odontologista{
-    height: 50px;
-  width: 500px;
-  margin-top: 400px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 20%;
+  background-image: url(./ImagensConsultas/Dente.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 
 }
 
 .neurologista{
-    height: 50px;
-  width: 500px;
-  margin-top: -200px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 60%;
-
+  background-image: url(./ImagensConsultas/Cerebro.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 }
 
 .oftalmologista{
-      height: 50px;
-  width: 500px;
-  margin-top: -80px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 60%;
-  
+  background-image: url(./ImagensConsultas/Olho.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 }
 
 .pediatra{
-      height: 50px;
-  width: 500px;
-  margin-top: 40px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 60%;
-  
+  background-image: url(./ImagensConsultas/Bebe.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 }
 
 .ortopedico{
-      height: 50px;
-  width: 500px;
-  margin-top: 160px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 60%;
-  
+  background-image: url(./ImagensConsultas/Osso.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 }
 
 .geriatrico{
-      height: 50px;
-  width: 500px;
-  margin-top: 280px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 60%;
-  
+  background-image: url(./ImagensConsultas/Velinho.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
 }
 
 .endocrino{
-  height: 50px;
-  width: 500px;
-  margin-top: 400px;
-  background-position: 12px;
-  border: 1px solid #b0b0b0;
-  background-color: #8BFFBC;
-  border-radius: 20px;
-  padding:12px ;
-  float: center;
-  display: flex;
-  position: absolute;
-  left: 60%;
+  background-image: url(./ImagensConsultas/Tiroide.png);
+	background-repeat: no-repeat;
+	background-position: 97%;
+	text-align: justify;
+	padding: 0px 15px;
+	margin-top: 15px;
+}
+
+.meio{
+  margin: 0 auto;
+	width: 1200px;
+	position: relative;
+}
+
+.img{
+	height: 55px;
+	float: right;
+	padding: 10px;
+}
+
+.copyright{
+	margin-top: 65px;
+	background-color: #D9D9D9;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
   
+.logodois{
+	padding: 10px;
+	height: 65px;
+}
+  
+.rodape{
+	width: 50%;
+}
+  
+.social{
+	float: right;
+	width: 50%;
+	margin-top: -70px ;
 }
