@@ -27,21 +27,72 @@
                 <img src="./ImagensCadastro/Pesssoa.png">Cadastro do Cliente
             </div><br><br><br>
 
-            <div class="client">
-                    <input placeholder="Nome completo*" type="text" id="nome">
-                    <input placeholder="Cpf*" type="text" id="cpf">
-                    <input placeholder="Telefone*" type="text" id="telefone">
-                    <input placeholder="E-mail*" type="text" id="email">
-                    <input placeholder="Senha*" type="password" id="senha">
-                    <input placeholder="Confirme sua senha*" type="password" id="senha-2">
-            </div> 
             
+            <div class="tudoo">
+                <label class="legais">Nome:</label>
+                <div class="btns-1">
+                    <input placeholder="Jair Messias Bolsonaro" type="text" id="nome">
+                    <div class="espaco">
+                        <label class="legais">Senha:</label><br>
+                        <input placeholder="******" type="password" id="senha">
+                    </div>
+                </div><br>
+                
+                <label class="legais">RG:</label>
+                <div class="btns-2">
+                    <input placeholder="88.888.888-8" type="text" id="rg">
+                    <div class="espaco">
+                        <label class="legais">Confirme sua senha:</label><br>
+                        <input placeholder="******" type="password" id="senha2">
+                    </div>
+                </div><br>
+
+                <label class="legais">CPF:</label>
+                <div class="btns-3">
+                    <input placeholder="888.888.888-88" type="text" id="cpf">
+                    <div class="espaco">
+                        <label class="legais">Estado:</label><br>
+                        <select name="linguagem" required="required" id="estado">
+                            <option value="">Selecionar...</option>
+                            <option>São Paulo</option>
+                        </select>
+                    </div>
+                </div><br>
+
+                <label class="legais">Telefone:</label>
+                <div class="btns-4">
+                    <input placeholder="+55 (19) 98888-8888" type="text" id="telefone">
+                    <div class="espaco">
+                        <label class="legais">Cidade:</label><br>
+                        <select name="linguagem" required="required" id="cidade">
+                            <option value="">Selecionar...</option>
+                            <option>Nova Odessa</option>
+                            <option>Sumaré</option>
+                            <option>Americana</option>
+                        </select>
+                    </div>
+                </div><br>
+
+                <label class="legais">Email:</label>
+                <div class="btns-5">
+                    <input placeholder="example@outlook.com" type="text" id="email">
+                    <div class="espaco">
+                        <label class="legais">Sexo:</label><br>
+                        <select name="linguagem" required="required" id="sexo">
+                            <option value="">Selecionar...</option>
+                            <option>Masculino</option>
+                            <option>Feminino</option>
+                            <option>Prefiro não dizer</option>
+                        </select>
+                    </div>
+                </div><br>
+
+                
+            </div> 
+
             <div class="botoes">
-                <a href="../Início/Início.html">
-                    <button class="prosseguir">
-                        Prosseguir
-                    </button>
-                </a>
+                <input value="Concluir" type="submit" onclick="Funcao(); return false" class="botprosseguir">
+                <div class="cadeistro"><h2>Já tem uma conta?</h2><a href="../Login/Login.html" style="text-decoration: none;"><h3>Entre</h3></a></div><br><br><br><br>
             </div>
         </main>
 
