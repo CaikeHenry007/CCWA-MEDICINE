@@ -9,9 +9,9 @@ var j = {
     'nomecomp' : ['Ana Julia Ferreira'],
     'cpf' : ['123.321.123.32'],
     'telefone' : ['1912321212'],
-    'email' : ['anajulia2023@gmail.com'],
-    'senha' : ['1234'],
-    'confsenha' : ['1234']
+    'email' : ['ferreira@gmail.com'],
+    'senha' : ['12345678'],
+    'confsenha' : ['12345678']
 
 }
 for(let i=0; i< j.nomecomp.length; i++){
