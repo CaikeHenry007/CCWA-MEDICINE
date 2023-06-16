@@ -19,7 +19,7 @@ function Funcao(){event.preventDefault;
     /*Admin*/
     if(email == "wellington@gmail.com" && senha == "1234" && escolher == "Administrador") {
         alert('Você foi logado com sucesso! Redirecionando para Admin...');
-        location.href = "../Caio/AGENDAMENTO.html";
+        location.href = "../Início/Início.html";
     } else {
         alert("Email ou senha inválidos");
     }
