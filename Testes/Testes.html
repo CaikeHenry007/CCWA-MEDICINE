@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Testes.css">
+		<title>CCWA Medicine</title>
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<div class="casinha">
+					<ul>
+						<li style="list-style-type: none;">
+							<a href="../Início/Início.html">
+								<img src="./ImagensTestes/Casinha.png">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="logo">
+					<img src="./ImagensTestes/Logo.png">
+				</div>
+
+				<div class="produtos">
+					<h1>Testes CCWA</h1>
+				</div>
+			</div>
+		</header>
+
+			<main style="height: 575px;">
+				<div class="everybody">
+					<div class="meio">
+						<img src="./ImagensTestes/Cartão.png" class="cartao">
+
+						<h2>Verifique o ID que contém no cartãozinho de seu último exame, caso você não <br> tenha mas esse cartão entre em contato conosco!<h2>
+					</div><br><br><br><br><br><br><br><br>
+						
+					<div class ="ident">
+						<form onsubmit="return procurar()">
+							<h4>Digite abaixo o ID do Lote:</h4>
+			
+							<input type="text" nome="id" id="id" placeholder="Exemplo: 99999" class="ID"><br><br>
+
+							<h4>Selecione o tipo de exame ou teste:</h4>
+
+							<select name="linguagem" required="required" id="teste">
+								<option value="">Selecionar...</option>
+								<option>Covid</option>
+								<option>Sangue</option>
+								<option>Fezes</option>
+								<option>Urina</option>
+								<option>Glicemia</option>
+								<option>Hemograma</option>
+								<option>Colesterol</option>
+							</select><br><br>
+
+							<input value="Pronto" type="submit" onclick="procurar(); return false" class="Pronto">
+						</form><br><br>
+						<div id="redic" class="redic"></div>
+
+					</div>
+				</div>
+            </main>
+
+		<footer>
+			<main>
+				<div id="footer_content">
+					<div class=rodape>
+						<img src="./ImagensTestes/Logo.png" class="logodois">
+					</div>
+
+					<div class="social">
+						<a href="#" class="footer-link" id="instagram">
+							<img src="./ImagensTestes/Instagram.png" class="img">
+						</a>
+						<a href="#" class="footer-link" id="facebook">
+							<img src="./ImagensTestes/Facebook.png" class="img">
+						</a>
+						<a href="#" class="footer-link" id="twitter">
+							<img src="./ImagensTestes/Twitter.png" class="img">
+						</a>
+					</div>
+				</div>
+			</main>
+
+			<div class="copyright">
+				<p>
+					CCWA Medicine © 2023-2023/ CNPJ: 99.999.999/9999-99/ Inscrição Estadual: 99.999.99-9,<br>
+					/ Endereço Rua: Ana Clara Fernades de Oliveira, Bairro das Anas, 30 - 99999-999/ Fale com CCWA</p>
+			</div>
+		</footer>
+	</body>
+
+    <script src="./Testes.js"></script>
+</html>

@@ -1,0 +1,227 @@
+/*Configurções padrão*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Alegreya Sans;
+}
+
+header{
+	margin: 0 auto;
+}
+
+body{
+  background: #8fffbc;
+	background: linear-gradient(180deg, #8fffbc 0%, #ffffff 75%);
+
+}
+main{
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+}
+
+.casa{
+  padding: 10px;
+}
+
+.homenzinho {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+}
+
+.texto {
+  padding-top: 60px;
+  font-size: 40px;
+}
+
+.tudoo{
+  margin-left: 130px;
+	margin-top: 75px;
+	width: 1200px;
+
+}
+
+#nome {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+
+#senha {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+#rg {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+
+#senha2 {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+#cpf {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+
+#estado {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+#telefone {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+
+#cidade {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+#email {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+
+#sexo {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+.botprosseguir {
+  width: 250px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 483px;
+  border: none;
+  border-radius: 30px;
+  background-color: #78FFAE;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.btns-1{
+  display: flex;
+}
+
+.btns-2{
+  display: flex;
+}
+.btns-3{
+  display: flex;
+}
+
+.btns-4{
+  display: flex;
+}
+
+.btns-5{
+  display: flex;
+}
+
+.btns-6{
+  display: flex;
+}
+
+.espaco{
+  position: absolute;
+  margin-left: 500px;
+  margin-top: -23px;
+}
+
+
+
+.legais{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cadeistro{
+  display: flex;
+  margin-left: 509px;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+h2{
+  font-size: 21px;
+  color: #000000;
+}
+
+h3{
+  font-size: 21px;
+  margin-left: 10px;
+  color: #000000;
+}
+
+h3:hover{
+  color: #1e5aff;
+}

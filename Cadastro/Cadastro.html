@@ -1,0 +1,103 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <link href="Cadastro.css" rel="stylesheet" type="text/css">
+    <title>CCWA Medicine</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="casa">
+            <ul>
+                <a href="../Início/Início.html">
+                    <img src="./ImagensCadastro/Casinha.png" />
+                </a>
+            </ul>
+        </div><br><br>
+    </header>
+
+    <main>
+        <div class="logo">
+            <img src="./ImagensCadastro/Logo.png">
+        </div><br><br><br>
+
+        <div class="homenzinho">
+            <img src="./ImagensCadastro/Pesssoa.png">Cadastro do Cliente
+        </div><br><br><br>
+
+        <div class="tudoo">
+            <label class="legais">Nome:</label>
+            <div class="btns-1">
+                <input placeholder="Jair Messias Bolsonaro" type="text" id="nome">
+                <div class="espaco">
+                    <label class="legais">Senha:</label><br>
+                    <input placeholder="******" type="password" id="senha">
+                </div>
+            </div><br>
+
+            <label class="legais">RG:</label>
+            <div class="btns-2">
+                <input placeholder="88.888.888-8" type="text" id="rg">
+                <div class="espaco">
+                    <label class="legais">Confirme sua senha:</label><br>
+                    <input placeholder="******" type="password" id="senha2">
+                </div>
+            </div><br>
+
+            <label class="legais">CPF:</label>
+            <div class="btns-3">
+                <input placeholder="888.888.888-88" type="text" id="cpf">
+                <div class="espaco">
+                    <label class="legais">Estado:</label><br>
+                    <select name="linguagem" required="required" id="estado">
+                        <option value="">Selecionar...</option>
+                        <option>São Paulo</option>
+                    </select>
+                </div>
+            </div><br>
+
+            <label class="legais">Telefone:</label>
+            <div class="btns-4">
+                <input placeholder="+55 (19) 98888-8888" type="text" id="telefone">
+                <div class="espaco">
+                    <label class="legais">Cidade:</label><br>
+                    <select name="linguagem" required="required" id="cidade">
+                        <option value="">Selecionar...</option>
+                        <option>Nova Odessa</option>
+                        <option>Sumaré</option>
+                        <option>Americana</option>
+                    </select>
+                </div>
+            </div><br>
+
+            <label class="legais">Email:</label>
+            <div class="btns-5">
+                <input placeholder="example@outlook.com" type="text" id="email">
+                <div class="espaco">
+                    <label class="legais">Sexo:</label><br>
+                    <select name="linguagem" required="required" id="sexo">
+                        <option value="">Selecionar...</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Prefiro não dizer</option>
+                    </select>
+                </div>
+            </div><br>
+        </div>
+            <div class="botoes">
+                <input value="Concluir" type="submit" onclick="Funcao(); return false" class="botprosseguir">
+                <div class="cadeistro">
+                    <h2>Já tem uma conta?</h2><a href="../Login/Login.html" style="text-decoration: none;">
+                        <h3>Entre</h3>
+                    </a>
+                </div><br><br><br><br>
+            </div>
+    </main>
+
+    <script src="Cadastro.js"></script>
+</body>
+
+</html>

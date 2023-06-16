@@ -1,0 +1,155 @@
+/*Configurções padrão*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Alegreya Sans;
+}
+
+header{
+	margin: 0 auto;
+  	width: 1000px;
+  	height: 175px;
+}
+
+body{
+	background: #8fffbc;
+	background: linear-gradient(180deg, #8fffbc 0%, #ffffff 60%);
+
+}
+main{
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+}
+
+footer{
+	margin-top: 500;
+	width: 100%;
+	height: 185px;
+	color:  #000000;
+	background-color: #eaeaea;
+	border: 2px solid #D9D9D9;
+}
+
+/*Fim Configurções padrão*/
+
+/*Cabeçalho*/
+
+.casinha{
+	width: 7%;
+	position: absolute;
+	padding: 10px 0px;
+	margin-left: -94px;
+}
+
+.logo{
+	width: 10%;
+	position: absolute;
+	margin-left: -22px;
+    padding: 10px 0px;
+}
+
+.produtos{
+	width: 20%;
+	position: absolute;
+	margin-left: 900px;
+	margin-top: 85px;
+}
+
+
+.orientaçao{
+	padding: 0px 10px 40px;
+}
+
+/*Fim Cabeçalho*/
+
+
+/*Area usável*/
+
+.container{
+	height: 1000px;
+	width: 1000px;
+	min-height: 75vh;
+	padding: 10px;
+	margin-left: 485px;
+}
+
+
+
+.card{
+	width: 31%;
+	display: inline-block;
+	background: #8fffde;
+	background: linear-gradient(0deg, #8fffde 0%, #ffffff 75%);
+	padding: 10px;
+	border-radius: 15px;
+	box-shadow: #8fffde;
+	font-size: 20px;
+}
+
+.card:hover{
+	background: #82e9ca;
+	background: linear-gradient(0deg, #82e9ca 0%, #fafafa 75%);
+	transform: scale(1.02);
+    transition: all 0.5s;
+}
+
+.remedios{
+	height: 250px;
+}
+
+.btn{
+	border-radius: 15%;
+	text-decoration: none;
+	width: 120px;
+	height: 50px;
+	background-color: #0AD85C;
+	border: none;
+	border-radius: 20px;
+	box-shadow: 5px solid #09c052;
+	font-size: 25px;
+}
+
+.btn:hover{
+	background-color: #09c052;
+	box-shadow: 200px solid #08a747;
+}
+
+/*Fim Area usável*/
+
+/*Rodapé*/
+
+.img{
+	height: 55px;
+	float: right;
+	padding: 10px;
+}
+
+.copyright{
+	margin-top: 65px;
+	background-color: #D9D9D9;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+  
+.logodois{
+	padding: 10px;
+	height: 65px;
+}
+  
+.rodape{
+	width: 50%;
+}
+  
+.social{
+	float: right;
+	width: 50%;
+	margin-top: -70px ;
+}
+
+/*Fim Rodapé*/
