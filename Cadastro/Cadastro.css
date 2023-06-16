@@ -157,6 +157,28 @@ main{
 
 
 
+
+
+
+.prosseguir {
+    height: 35px;
+    width: 280px;
+    margin-top: 25px;
+    background-position: 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding:12px ;
+    float: center;
+    background-color: #8fffbc;
+    position: absolute;
+    left: 38%;
+    top: 250%;
+}
+
+#client {
+position: absolute;
+right: 22%;
+}
 .botprosseguir {
   width: 250px;
   height: 50px;
@@ -167,6 +189,7 @@ main{
   background-color: #78FFAE;
   font-size: 20px;
   font-weight: bold;
+
 }
 
 .btns-1{
