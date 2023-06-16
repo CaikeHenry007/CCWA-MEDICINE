@@ -48,7 +48,7 @@
 
 							<h4>Selecione o tipo de exame ou teste:</h4>
 
-							<select name="linguagem" required="required">
+							<select name="linguagem" required="required" id="teste">
 								<option value="">Selecionar...</option>
 								<option>Covid</option>
 								<option>Sangue</option>
@@ -58,8 +58,8 @@
 								<option>Hemograma</option>
 								<option>Colesterol</option>
 							</select><br><br>
-			
-							<input type="submit" value="Pronto" class="Pronto">
+
+							<input value="Pronto" type="submit" onclick="procurar(); return false" class="Pronto">
 						</form><br><br>
 						<div id="redic" class="redic"></div>
 

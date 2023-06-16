@@ -1,26 +1,11 @@
 function procurar(){
     var id = document.getElementById('id').value;
-    var teste = [
-        { "id": "12345" }
-    ];
+    var teste = document.getElementById('teste').value;
 
-    redic = document.getElementById("redic");
-
-    if (id == teste[0].id) {
-        redic.innerHTML = "ID encontrado redirecionando...";
-    return redi();
+    if (id == "12345" && teste == "Covid") {
+        alert('Teste encontrado! Redirecionando...');
+        location.href = "../Início/Início.html";
+    } else {
+        alert('Teste não encontrado! Tente novamente...');
     }
-    if (id != teste[0].id) {
-        redic.innerHTML = "ID não encontrado. Tente novamente!";
-        return testea();
-    }
-}
-
-function redi() {event.preventDefault();
-    window.location.href="../Início/Início.html";
-}
-
-
-function testea() {event.preventDefault();
-    window.location.href="./index.html";
 }

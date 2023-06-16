@@ -1,4 +1,12 @@
 /* Configurações padrão*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+*{
+  font-family: Alegreya Sans;
+}
+
 html{
   width: 100%;
 }
@@ -60,7 +68,7 @@ ul{
   display: inline-block;
   color: #8f8f8f;
   font-size: 20px;
-  font-family: Trebuchet MS, sans-serif;
+  
 }
 
 .itens ul li a{
@@ -111,7 +119,7 @@ ul{
 .informacoes {
   float: left;
   font-size: 13px;
-  font-family: Trebuchet MS, sans-serif;
+  
   padding: 15px;
   margin-top: -5px;
 }
@@ -250,7 +258,7 @@ ul{
   text-align: center;
   color: #a8a8a8;
   font-size: 35px;
-  font-family: Trebuchet MS, sans-serif;
+  font-family: Gruppo;
 }
 
 /*Fim da Pergunta*/
@@ -270,7 +278,7 @@ ul{
   border-radius: 10px;
   background-color:  #C4FBDA;
   text-align: center;
-  font-family: Trebuchet MS, sans-serif;
+  
   font-size: 23px;
 }
 
@@ -288,7 +296,7 @@ ul{
   border-radius: 10px;
   background-color: #AAFFCC;
   text-align: center;
-  font-family: Trebuchet MS, sans-serif;
+  
   font-size: 23px;
 }
 
@@ -306,7 +314,7 @@ ul{
   border-radius: 10px;
   background-color: #88FFB8;
   text-align: center;
-  font-family: Trebuchet MS, sans-serif;
+  
   font-size: 23px;
 }
 
@@ -324,7 +332,7 @@ ul{
   border-radius: 10px;
   background-color: #67FFA4;
   text-align: center;
-  font-family: Trebuchet MS, sans-serif;
+  
   font-size: 23px;
 }
 

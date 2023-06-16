@@ -1,5 +1,6 @@
 /* Configurações padrão*/
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 *{
   font-family: Alegreya Sans;
@@ -277,6 +278,7 @@ ul{
 .oque{
   margin-top: 75PX;
   text-align: center;
+  font-family: Gruppo;
   color: #a8a8a8;
   font-size: 35px;
 }
