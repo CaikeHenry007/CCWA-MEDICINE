@@ -21,38 +21,36 @@ db.connect((err) => {
   }
 });
 
-// Rota para mostrar as consultas do médico
-app.get('/medicoConsultas', (req, res) => {
-  // Substitua 'idDoMedico' pelo ID real do médico ou ajuste conforme necessário
-  const idDoMedico = 1;
+// Rota para redirecionar para a página 'index' quando acessado o localhost:3000
+app.get('/', (req, res) => {
+  res.render('index');
+});
 
-  // Consulta para obter as consultas associadas ao médico
+app.get('/medicoPage', (req, res) => {
+  const idDoMedico = 1;
   const consultasDoMedicoQuery = 'SELECT * FROM consultas WHERE id_medico = ?';
+  
   db.query(consultasDoMedicoQuery, [idDoMedico], (err, results) => {
     if (err) {
       res.status(500).send('Erro no servidor ao obter consultas do médico');
     } else {
-      // Renderiza a página EJS com os resultados da consulta
-      res.render('medicoConsultas', { consultas: results });
+      res.render('medicoPage', { consultas: results });
     }
   });
 });
 
-// Rota para exibir a página de consultas (GET)
 app.get('/consultas', (req, res) => {
-  res.render('consultas'); // Certifique-se de que você tenha um arquivo de modelo 'consultas.ejs' definido
+  res.render('consultas'); 
 });
 
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
-
-  // Verifica se nome_paciente não é nulo ou vazio
+  
   if (!nome_paciente) {
     res.status(400).send('O campo nome_paciente não pode ser nulo ou vazio');
     return;
   }
 
-  // Evitar SQL injection usando placeholders
   const cadastroQuery = 'INSERT INTO consultas (nome_paciente, data_consulta, hora_consulta, especialista, criado_em) VALUES (?, ?, ?, ?, ?)';
   
   db.query(cadastroQuery, [nome_paciente, data_consulta, hora_consulta, especialista, criado_em], (err, result) => {
@@ -66,33 +64,31 @@ app.post('/consultas', (req, res) => {
   });
 });
 
-
-// Rotas para a seção de cadastro, login e páginas do usuário
 app.get('/cadastro', (req, res) => {
-  res.render('cadastro'); 
+  res.render('cadastro');
 });
 
 app.post('/cadastro', (req, res) => {
   const { username, password, cpf, telefone, email, sexo, CEP } = req.body;
   const userType = 'user';
 
-  // Verificar se o usuário já existe no banco de dados
   const verificaUsuarioQuery = 'SELECT * FROM cadastro WHERE username = ? OR email = ?';
+  
   db.query(verificaUsuarioQuery, [username, email], (err, results) => {
     if (err) {
       res.status(500).send('Erro no servidor ao verificar usuário');
     } else if (results.length > 0) {
       res.send('Usuário ou email já cadastrado');
     } else {
-      // Se o usuário não existe, realizar o cadastro
       const cadastroQuery = 'INSERT INTO cadastro (username, password, cpf, telefone, email, sexo, CEP, user_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+      
       db.query(cadastroQuery, [username, password, cpf, telefone, email, sexo, CEP, userType], (err, result) => {
         if (err) {
           res.status(500).send('Erro no servidor ao cadastrar');
         } else {
           const user_id = result.insertId;
-
           const loginQuery = 'INSERT INTO login (user_id, last_login) VALUES (?, NOW())';
+
           db.query(loginQuery, [user_id], (err, result) => {
             if (err) {
               res.status(500).send('Erro no servidor ao criar login');
@@ -144,7 +140,7 @@ app.post('/login', (req, res) => {
             res.redirect('/userPage');
           } else if (user_type === 'medico') {
             // Redireciona o médico diretamente para a página de consultas dele
-            res.redirect('/medicoConsultas');
+            res.redirect('/medicoPage');
           } else {
             res.send('Tipo de usuário desconhecido');
           }
@@ -156,8 +152,18 @@ app.post('/login', (req, res) => {
   });
 });
 
+  // READ
+  app.get('/medicoPage', (req, res) => {
+    db.query('SELECT * FROM consultas', (err, result) => {
+      if (err) throw err;
+      const consultas = Array.isArray(results) ? results  : [];
+      res.render('medicoPage', { consultas: result });
+    });
+  });
+
 app.use(express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/Images'));
+
 
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
