@@ -27,17 +27,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/medicoPage', (req, res) => {
-  const idDoMedico = 1;
-  const consultasDoMedicoQuery = 'SELECT * FROM consultas WHERE id_medico = ?';
-  
-  db.query(consultasDoMedicoQuery, [idDoMedico], (err, results) => {
-    if (err) {
-      res.status(500).send('Erro no servidor ao obter consultas do médico');
-    } else {
-      res.render('medicoPage', { consultas: results });
-    }
+    db.query('SELECT * FROM consultas', (err, result) => {
+      if (err) throw err;
+      res.render('medicoPage', { consultas: result });
+    });
   });
-});
+  
 
 app.get('/consultas', (req, res) => {
   res.render('consultas'); 
@@ -62,7 +57,7 @@ db.query(cadastroQuery, [nome_paciente, data_consulta, hora_consulta, especialis
     res.redirect('/index1');
     // Se este código está sendo executado no servidor, você pode enviar uma resposta para o cliente e manipular a mensagem no lado do cliente com JavaScript.
     // Se você estiver no lado do cliente, use window.alert como está.
-    window.alert('Consulta cadastrada com sucesso');
+    // window.alert('Consulta cadastrada com sucesso');
   }
 });
 });
