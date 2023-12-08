@@ -93,7 +93,7 @@ app.post('/cadastro', (req, res) => {
             if (err) {
               res.status(500).send('Erro no servidor ao criar login');
             } else {
-              res.send('Cadastro e login realizados com sucesso');
+              res.redirect('/login');
             }
           });
         }
@@ -118,6 +118,18 @@ app.get('/medicoPage', (req, res) => {
   res.render('medicoPage');
 });
 
+app.get('/index1', (req, res) => {
+    res.render('index1');
+});
+
+app.get('/index2', (req, res) => {
+    res.render('index2');
+});
+
+app.get('/index3', (req, res) => {
+    res.render('index3');
+});
+
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
@@ -135,12 +147,12 @@ app.post('/login', (req, res) => {
           res.status(500).send('Erro no servidor ao buscar informações de login');
         } else {
           if (user_type === 'admin') {
-            res.redirect('/adminPage');
+            res.redirect('/index3');
           } else if (user_type === 'user') {
-            res.redirect('/userPage');
+            res.redirect('/index1');
           } else if (user_type === 'medico') {
             // Redireciona o médico diretamente para a página de consultas dele
-            res.redirect('/medicoPage');
+            res.redirect('/index2');
           } else {
             res.send('Tipo de usuário desconhecido');
           }
