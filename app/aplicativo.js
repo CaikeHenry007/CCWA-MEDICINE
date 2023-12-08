@@ -60,6 +60,10 @@ app.get('/consultas', (req, res) => {
     res.render('consultas'); 
   });
 
+  app.get('/Produtos', (req, res) => {
+    res.render('Produtos'); 
+  });
+
 
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
