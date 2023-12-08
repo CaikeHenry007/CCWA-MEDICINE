@@ -53,16 +53,20 @@ app.post('/consultas', (req, res) => {
 
   const cadastroQuery = 'INSERT INTO consultas (nome_paciente, data_consulta, hora_consulta, especialista, criado_em) VALUES (?, ?, ?, ?, ?)';
   
-  db.query(cadastroQuery, [nome_paciente, data_consulta, hora_consulta, especialista, criado_em], (err, result) => {
-    if (err) {
-      console.error('Erro ao cadastrar consulta: ' + err.stack);
-      res.status(500).send('Erro no servidor ao cadastrar');
-    } else {
-      console.log('Consulta cadastrada com sucesso. ID: ' + result.insertId);
-      res.send('Consulta cadastrada com sucesso');
-    }
-  });
+db.query(cadastroQuery, [nome_paciente, data_consulta, hora_consulta, especialista, criado_em], (err, result) => {
+  if (err) {
+    console.error('Erro ao cadastrar consulta: ' + err.stack);
+    res.status(500).send('Erro no servidor ao cadastrar');
+  } else {
+    console.log('Consulta cadastrada com sucesso. ID: ' + result.insertId);
+    res.redirect('/index1');
+    // Se este código está sendo executado no servidor, você pode enviar uma resposta para o cliente e manipular a mensagem no lado do cliente com JavaScript.
+    // Se você estiver no lado do cliente, use window.alert como está.
+    window.alert('Consulta cadastrada com sucesso');
+  }
 });
+});
+
 
 app.get('/cadastro', (req, res) => {
   res.render('cadastro');
