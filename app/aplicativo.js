@@ -32,11 +32,34 @@ app.get('/medicoPage', (req, res) => {
       res.render('medicoPage', { consultas: result });
     });
   });
-  
 
-app.get('/consultas', (req, res) => {
-  res.render('consultas'); 
+  app.get('/adminPage', (req, res) => {
+    // Consultas
+    db.query('SELECT * FROM consultas', (errConsultas, resultConsultas) => {
+        if (errConsultas) throw errConsultas;
+
+        // Cadastro
+        db.query('SELECT * FROM cadastro', (errCadastro, resultCadastro) => {
+            if (errCadastro) throw errCadastro;
+
+            // Renderiza a página 'adminPage' com os resultados das consultas e do cadastro
+            res.render('adminPage', { consultas: resultConsultas, cadastro: resultCadastro });
+        });
+    });
 });
+
+    
+
+    
+
+  app.get('/consultas', (req, res) => {
+  res.render('consultas'); 
+});;
+  
+app.get('/consultas', (req, res) => {
+    res.render('consultas'); 
+  });
+
 
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
@@ -171,6 +194,28 @@ app.post('/login', (req, res) => {
       res.render('medicoPage', { consultas: result });
     });
   });
+
+  app.get('/adminPage', (req, res) => {
+    db.query('SELECT * FROM consultas', (err, result) => {
+      if (err) throw err;
+      const consultas = Array.isArray(results) ? results  : [];
+      res.render('adminPage', { consultas: result });
+    });
+  });
+
+
+  // cadastro usuarios
+
+  app.get('/adminPage', (req, res) => {
+    db.query('SELECT * FROM cadastro', (err, result) => {
+      if (err) throw err;
+      const cadastro = Array.isArray(results) ? results  : [];
+      res.render('adminPage', { cadastro: result });
+    });
+  });
+
+
+
 
 app.use(express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/Images'));
