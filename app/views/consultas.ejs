@@ -13,7 +13,7 @@
         <div class="casa">
             <ul>
                 <a href="../InÃ­cio/InÃ­cio.html">
-                    <img src="/Images/Casinha.png" />
+                    <img src="Images/Casinha.png" />
                 </a>
             </ul>
         </div><br><br>
@@ -21,18 +21,18 @@
 
     <main>
         <div class="logo">
-            <img src="/Images/Logo.png">
+            <img src="Images/Logo.png">
         </div><br><br><br>
 
         <div class="homenzinho">
-            <img src="/Images/Pesssoa.png">Agende sua Consulta
-        </div><br><br><br>
+            <img src="Images/Estetoscopio.png">Agende sua Consulta
+        </div>
 
         <form method="POST" action="/consultas">
         <div class="tudoo">
             <label class="legais">Nome:</label>
             <div class="btns-1">
-                <input name="nome_paciente" placeholder="Jair Messias Bolsonaro" type="text" id="nome_paciente">
+                <input name="nome_paciente" placeholder="Neide Costas" type="text" id="nome_paciente">
                 <div class="espaco">
                     <label class="legais">Dia:</label><br>
                     <input placeholder="Dia/MÃŠs/Ano" type="date" id="data_consulta" name="data_consulta">
@@ -49,21 +49,34 @@
                         <option>Feminino</option>
                         <option>Masculino</option>
                         <option>Outro</option>
-                    </select><br>
-                    <label class="legais">Selecione o seu médico:</label><br>
-                    <select name="especialista" required="required" id="especialista">
-                      <option value="">Selecionar...</option>
-                      <option>Cardiologista</option>
-                      <option>Ginecologista</option>
-                      <option>Oftalmologista</option>
                     </select>
                 </div>
-              </div>
+            </div><br>
+
+            <label class="legais">Selecione o seu médico:</label><br>
+            <div class="btns-3">
+                <select name="especialista" required="required" id="especialista">
+                    <option value="">Selecionar...</option>
+                    <option>Cardiologista</option>
+                    <option>Dermatologista</option>
+                    <option>Otorrinolaringologista</option>
+                    <option>Urologista</option>
+                    <option>Ginecologista</option>
+                    <option>Odontologista</option>
+                    <option>Neurologista</option>
+                    <option>Oftalmologista</option>
+                    <option>Pediatra</option>
+                    <option>Ortopedico(a)</option>
+                    <option>Geriatrico(a)</option>
+                    <option>Endocrino(a)</option>
+                </select>
+            </div><br><br><br>
+
             <div class="botoes">
-    <button type="submit">Agendar</button>
-  </form>
-                </div><br><br><br><br>
-            </div>
+                <button type="submit">Agendar</button>
+            </div> 
+        </form>
+  
     </main>
 
     <script src="Cadastro.js"></script>
@@ -152,6 +165,17 @@ main{
   background-color: #D9D9D9;
 }
 
+#especialista {
+  width: 450px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  background-color: #D9D9D9;
+}
+
+
 
 #sexo {
   width: 450px;
@@ -204,8 +228,6 @@ button {
   margin-left: 500px;
   margin-top: -23px;
 }
-
-
 
 .legais{
   font-size: 20px;

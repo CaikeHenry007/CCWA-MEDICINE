@@ -246,7 +246,7 @@
             <div class="casa">
                 <ul>
                     <a href="http://localhost:3000/">
-                        <img src="Casinha.png" />
+                        <img src="Images/Casinha.png">
                     </a>
                 </ul>
             </div><br>
@@ -254,11 +254,11 @@
     
         <main>
             <div class="logo">
-                <img src="Logo.png">
+                <img src="Images/Logo.png">
             </div><br><br><br>
     
             <div class="homenzinho">
-                <img src="Pesssoa.png">Cadastro do Cliente
+                <img src="Images/Pesssoa.png">Cadastro do Cliente
             </div>
         
             <div class="tudoo">
@@ -299,6 +299,12 @@
                         <div class="espaco">
                             <label class="legais">CEP:</label><br>
                             <input type="text" name="CEP" placeholder="199999-99" id="cep" />
+                            <script>
+                                // Adicione a máscara ao campo de Telefone usando Inputmask
+                                $(document).ready(function () {
+                                    $('#cep').inputmask("99999-999");
+                                });
+                            </script>
                         </div>
                     </div><br>
 
@@ -312,8 +318,8 @@
                             });
                         </script>
                         <div class="espaco">
-                            <label class="legais">Cidade:</label><br>
-                            <input type="text" name="cidade" placeholder="Galiléia" id="cidade" />
+                            <label class="legais">Número da Residência</label><br>
+                            <input type="number" name="cidade" placeholder="799" id="cidade" />
                         </div>
                     </div><br>
 
