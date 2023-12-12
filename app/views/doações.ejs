@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Doações.css">
+		<title>CCWA Medicine</title>
+	</head>
+
+	<style>
+		/*Configurções padrão*/
+
+		@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: Alegreya Sans;
+		}
+
+		header{
+			margin: 0 auto;
+			width: 1000px;
+			height: 175px;
+		}
+
+		body{
+			background: #8fffbc;
+			background: linear-gradient(180deg, #8fffbc 0%, #ffffff 60%);
+
+		}
+		main{
+			margin: 0 auto;
+			width: 1200px;
+			position: relative;
+		}
+
+		footer{
+			margin-top: 500;
+			width: 100%;
+			height: 185px;
+			color:  #000000;
+			background-color: #eaeaea;
+			border: 2px solid #D9D9D9;
+		}
+
+		/*Fim Configurções padrão*/
+
+		/*Cabeçalho*/
+
+		.casinha{
+			width: 7%;
+			position: absolute;
+			padding: 10px 0px;
+			margin-left: -94px;
+		}
+
+		.logo{
+			width: 10%;
+			position: absolute;
+			margin-left: -22px;
+			padding: 10px 0px;
+		}
+
+		.produtos{
+			width: 20%;
+			position: absolute;
+			margin-left: 900px;
+			margin-top: 85px;
+		}
+
+
+		.orientaçao{
+			padding: 0px 30px 40px;
+		}
+
+		/*Fim Cabeçalho*/
+
+		/*Area usável*/
+
+		.donations{
+			width: 350PX;
+			height: 60PX;
+			background-color: #8fffbc;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 5px 5px #83e9ac;
+			padding: 0px 10px;
+			color: #000000;
+			font-size: 22px;
+			font-weight: bold;
+		}
+
+		.donations:hover{
+			background-color: #83e9ac;
+			box-shadow: 5px 5px #7ad89f;
+			transform: scale(1.05);
+			transition: all 0.5s;
+		}
+
+		.botao{
+			margin-left: 135px;
+			margin-top: 75px;
+			width: 1000px;
+		}
+
+		#outro{
+			background-image: url(Images/Outros.png);
+			background-repeat: no-repeat;
+			background-position: 97%;
+			text-align: justify;
+			padding: 0px 15px;
+			margin-left: 15px;
+		}
+
+		#dinheiro{
+			background-image: url(Images/Dinheiro.png);
+			background-repeat: no-repeat;
+			background-position: 97%;
+			text-align: justify;
+			padding: 0px 15px;
+			margin-top: 15px;
+		}
+		#comida{
+			background-image: url(Images/Comida.png);
+			background-repeat: no-repeat;
+			background-position: 97%;
+			text-align: justify;
+			padding: 0px 15px;
+			margin-left: 15px;
+		}
+		#roupa{
+			background-image: url(Images/Roupas.png);
+			background-repeat: no-repeat;
+			background-position: 97%;
+			text-align: justify;
+			padding: 0px 15px;
+			margin-top: 15px;
+		}
+
+		.logo-2{
+			height: 150px;
+			position: absolute;
+		}
+
+		h2{
+			position: absolute;
+			margin-left: 350px;
+			font-size: 18px;
+			text-align: justify;
+			width: 42%;
+		}
+
+		h4{
+			font-size: 18px;
+			text-align: left;
+			margin-left: 335px;
+		}
+
+		.meio{
+			width: 800px;
+			margin-left: 75px;
+			margin-top: 80px;
+		}
+
+		.everybody{
+			margin-left: 100px;
+		}
+
+		#subTela1{
+			border-radius: 12px;
+			border: solid 3px #000000;
+			background-color: #8fffbc;
+			background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+			width: 500px;
+			height: 300px;
+			position: absolute;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			margin-left: 50%;
+			margin-top: -15%;
+			font-size: 14px;
+			}
+
+		#subTela2{
+			border-radius: 12px;
+			border: solid 3px #000000;
+			background-color: #8fffbc;
+			background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+			width: 500px;
+			height: 365px;
+			position: absolute;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			margin-left: 50%;
+			margin-top: -15%;
+			font-size: 14px;
+			}
+
+		h3{
+			width: 450px;
+			margin-left: 25px;
+		}
+
+		h5{
+			font-size: 20px;
+		}
+
+		.QR{
+			width: 250px;
+		}
+			
+		#subTelao1{
+			border-radius: 12px;
+			border: solid 3px #000000;
+			background-color: #8fffbc;
+			background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+			width: 700px;
+			height: 520px;
+			position: absolute;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			margin-left: 50%;
+			margin-top: -15%;
+			font-size: 14px;
+		}
+
+			.logotreis {
+				margin-top: 30px;
+				height: 55px;
+			}
+
+			.conc{
+				border: none;
+				background-color: #79e9a4;
+				width: 150px;
+				height: 30px;
+				font-size: 14px;
+				border-radius: 10px;
+			}
+
+			.conc:hover{
+				border: none;
+				background-color: #6ccf92;
+				width: 150px;
+				height: 30px;
+				font-size: 14px;
+				border-radius: 10px;
+			}
+		/*Fim Area usável*/
+
+		/*Rodapé*/
+
+		.img{
+			height: 55px;
+			float: right;
+			padding: 10px;
+		}
+
+		.copyright{
+			margin-top: 65px;
+			background-color: #D9D9D9;
+			width: 100%;
+			height: 50px;
+			text-align: center;
+		}
+		
+		.logodois{
+			padding: 10px;
+			height: 65px;
+		}
+		
+		.rodape{
+			width: 50%;
+		}
+		
+		.social{
+			float: right;
+			width: 50%;
+			margin-top: -70px ;
+		}
+
+		/*Fim Rodapé*/
+	</style>
+
+	<body>
+		<header>
+			<div>
+				<div class="casinha">
+					<ul>
+						<li style="list-style-type: none;">
+							<a href="../Início/Início.html">
+								<img src="Images/Casinha.png">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="logo">
+					<img src="Images/Logo.png">
+				</div>
+
+				<div class="produtos">
+					<h1>Doações CCWA</h1>
+				</div>
+			</div>
+		</header>
+
+		<main style="height: 575px;">
+			<div class="everybody">
+				<div class="meio">
+					<img src="Images/Logosinho.png" class="logo-2">
+
+					<h2 class="h2">Nós da CCWA Medicine fazemos doações para várias ONG’s de 
+						caridade, que ajudam os mais necessitados, tanto com alimentos 
+						quanto com roupas, caso você queira fazer parte deste ato de 
+						benevolência, doando a quantia que desejar, ou trazendo as doações 
+						de roupas e alimentos para a nossa clínica, será de grande ajuda,
+						tanto para o nosso país, quanto para o seu próprio altruísmo!<h2>
+				</div><br><br><br><br><br><br><br><br>
+                
+                <div class="botao">
+                        <button id="roupa" type="button" class="donations">Roupas</button>
+					
+                        <button id="comida" type="button" class="donations">Alimentos</button>
+					
+                        <button id="dinheiro" type="button" class="donations">Dinheiro</button>
+					
+                        <button id="outro" type="button" class="donations">Outros</button>
+                </div>
+            </div>
+
+			<div id="subTela1" style="display: none;">
+				<img src="Images/Logo.png" class="logotreis"><br><br><br>
+				<h3 class="realmente">Para fazer a doação de Roupas, Alimentos ou de alguma outra coisa, pedimos que você vá ao estabelecimento mais próximo da CCWA Medicine e deposite as suas doações no local, pois nossa corporação não retira as doações na casa do remetente.</h3><br><br><br>
+				<button class="conc" type="button" id="close">Ok</button>
+			</div>
+
+			<script>
+				//Evento para abrir a SubTela1
+				document.getElementById("roupa").addEventListener("click", function () {
+					abrirSubTela1();
+				});
+
+				document.getElementById("comida").addEventListener("click", function () {
+					abrirSubTela1();
+				});
+
+				document.getElementById("outro").addEventListener("click", function () {
+					abrirSubTela1();
+				});
+		
+				//Evento para fechar a SubTela1
+				document.getElementById("close").addEventListener("click", function () {
+					fecharSubTela1();
+				});
+		
+				function abrirSubTela1() {
+					document.getElementById("subTela1").style.display = "block";
+				}
+		
+				function fecharSubTela1() {
+					document.getElementById("subTela1").style.display = "none";
+				}
+			</script>
+
+			<div id="subTela2" style="display: none;">
+				<img src="Images/Logo.png" class="logotreis"><br><br><br>
+				<h3 class="realmente">Deseja fazer alguma doação de alguma qauntia agora?</h3><br>
+				<h3 class="realmente">Para fazer uma doação de alguma qauntia agora, escaneie o próximo QR Code e doe o valor que sentir no seu coração via PIX</h3><br>
+				<h3 class="realmente">Caso queira doar uma quantia em dinheiro físico, pedimos para que você vá ao estabelecimento mais próximo da CCWA Medicine e à leve</h3><br><br><br>
+				<button class="conc" type="button" id="close2">Cancelar</button>
+				<button class="conc" type="button" id="other2">Doar agora</button>
+			</div>
+			
+			<div id="subTelao1" style="display: none;">
+				<img src="Images/Logo.png" class="logotreis"><br><br><br>
+				<h5 class="realmente">Escaneie o código abaixo:</h5>
+				<img src="Images/Doações CCWA.png" class="QR"><br>
+				<h5 class="realmente">Chave PIX: (19) 99999-9999</h5><br><br>
+				<button class="conc" type="button" id="closee">Pronto</button>
+			</div>
+
+			<script>
+				//Evento para abrir a SubTela1
+				document.getElementById("dinheiro").addEventListener("click", function () {
+					abrirSubTela2();
+				});
+		
+				//Evento para fechar a SubTela1
+				document.getElementById("close2").addEventListener("click", function () {
+					fecharSubTela2();
+				});
+
+				document.getElementById("other2").addEventListener("click", function () {
+					fecharSubTela2();
+				});
+		
+				function abrirSubTela2() {
+					document.getElementById("subTela2").style.display = "block";
+				}
+		
+				function fecharSubTela2() {
+					document.getElementById("subTela2").style.display = "none";
+				}
+
+				//Telaooo
+			
+				document.getElementById("other2").addEventListener("click", function () {
+					abrirSubTelao1();
+				});
+			
+					//Evento para fechar a SubTelao
+				document.getElementById("closee").addEventListener("click", function () {
+					fecharSubTelao1();
+				});
+			
+				function abrirSubTelao1() {
+					document.getElementById("subTelao1").style.display = "block";
+				}
+			
+				function fecharSubTelao1() {
+					document.getElementById("subTelao1").style.display = "none";
+				}
+			</script>
+                
+        </main>
+
+		<footer>
+			<main>
+				<div id="footer_content">
+					<div class=rodape>
+						<img src="Images/Logo.png" class="logodois">
+					</div>
+
+					<div class="social">
+						<a href="#" class="footer-link" id="instagram">
+							<img src="Images/Instagram.png" class="img">
+						</a>
+						<a href="#" class="footer-link" id="facebook">
+							<img src="Images/Facebook.png" class="img">
+						</a>
+						<a href="#" class="footer-link" id="twitter">
+							<img src="Images/Twitter.png" class="img">
+						</a>
+					</div>
+				</div>
+			</main>
+
+			<div class="copyright">
+				<p>
+					CCWA Medicine © 2023-2023/ CNPJ: 99.999.999/9999-99/ Inscrição Estadual: 99.999.99-9,<br>
+					/ Endereço Rua: Ana Clara Fernades de Oliveira, Bairro das Anas, 30 - 99999-999/ Fale com CCWA</p>
+			</div>
+		</footer>
+	</body>
+
+    <script src="./Testes.js"></script>
+</html>

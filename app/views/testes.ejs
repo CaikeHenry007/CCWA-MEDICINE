@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Testes.css">
+		<title>CCWA Medicine</title>
+	</head>
+
+	<style>
+		/*Configurções padrão*/
+
+		@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: Alegreya Sans;
+		}
+
+		header{
+			margin: 0 auto;
+			width: 1000px;
+			height: 175px;
+		}
+
+		body{
+			background: #8fffbc;
+			background: linear-gradient(180deg, #8fffbc 0%, #ffffff 60%);
+
+		}
+		main{
+			margin: 0 auto;
+			width: 1200px;
+			position: relative;
+		}
+
+		footer{
+			margin-top: 500;
+			width: 100%;
+			height: 185px;
+			color:  #000000;
+			background-color: #eaeaea;
+			border: 2px solid #D9D9D9;
+		}
+
+		/*Fim Configurções padrão*/
+
+		/*Cabeçalho*/
+
+		.casinha{
+			width: 7%;
+			position: absolute;
+			padding: 10px 0px;
+			margin-left: -94px;
+		}
+
+		.logo{
+			width: 10%;
+			position: absolute;
+			margin-left: -22px;
+			padding: 10px 0px;
+		}
+
+		.produtos{
+			width: 20%;
+			position: absolute;
+			margin-left: 900px;
+			margin-top: 85px;
+		}
+
+
+		.orientaçao{
+			padding: 0px 30px 40px;
+		}
+
+		/*Fim Cabeçalho*/
+
+		/*Area usável*/
+
+		.cartao{
+			width: 150px;
+			position: absolute;
+		}
+
+		h2{
+			position: absolute;
+			margin-left: 175px;
+			font-size: 22px;
+			width: 675px;
+			text-align: justify;
+		}
+
+		h4{
+			font-size: 18px;
+			text-align: left;
+			margin-left: 355px;
+		}
+
+		.meio{
+			width: 800px;
+			margin-left: 100px;
+			margin-top: 50px;
+		}
+
+		.ident{
+			text-align: center;
+			margin-right: 90px;
+		}
+
+		.ID{
+			width: 350px;
+			height: 40px;
+			background-color: #D9D9D9;
+			border: none;
+			border-radius: 15px;
+			box-shadow: 5px 5px #c5c5c5;
+			padding: 0px 10px;
+			color: grey;
+			font-size: 16px;
+		}
+
+		.Pronto{
+			width: 250PX;
+			height: 40PX;
+			background-color: #8fffbc;
+			border: none;
+			border-radius: 15px;
+			box-shadow: 5px 5px #83e9ac;
+			padding: 0px 10px;
+			color: grey;
+			font-size: 16px;
+		}
+
+		.Pronto:hover{
+			background-color: #83e9ac;
+			box-shadow: 5px 5px #7bdaa1;
+			transform: scale(1.1);
+			transition: all 0.5s;
+		}
+
+		select{
+			width: 350px;
+			height: 40px;
+			background-color: #D9D9D9;
+			border: none;
+			border-radius: 15px;
+			box-shadow: 5px 5px #c5c5c5;
+			padding: 0px 10px;
+			color: grey;
+			font-size: 16px;
+			
+		}
+
+		#redic {
+			font-size: 18px;
+		}
+
+		.everybody{
+			margin-left: 70px;
+		}
+
+		#subTela1{
+			border-radius: 12px;
+			border: solid 3px #000000;
+			background-color: #8fffbc;
+			background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+			width: 500px;
+			height: 300px;
+			position: absolute;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			margin-left: 50%;
+			margin-top: -15%;
+			font-size: 14px;
+		}
+
+		#subTela2{
+			border-radius: 12px;
+			border: solid 3px #000000;
+			background-color: #8fffbc;
+			background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+			width: 500px;
+			height: 300px;
+			position: absolute;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			margin-left: 50%;
+			margin-top: -15%;
+			font-size: 17px;
+		}
+
+		.logotreis {
+			margin-top: 30px;
+			height: 55px;
+		}
+
+		.conc{
+			border: none;
+			background-color: #79e9a4;
+			width: 150px;
+			height: 30px;
+			font-size: 14px;
+			border-radius: 10px;
+		}
+
+		.conc:hover{
+			border: none;
+			background-color: #6ccf92;
+			width: 150px;
+			height: 30px;
+			font-size: 14px;
+			border-radius: 10px;
+		}
+
+		/*Fim Area usável*/
+
+		/*Rodapé*/
+
+		.img{
+			height: 55px;
+			float: right;
+			padding: 10px;
+		}
+
+		.copyright{
+			margin-top: 65px;
+			background-color: #D9D9D9;
+			width: 100%;
+			height: 50px;
+			text-align: center;
+		}
+		
+		.logodois{
+			padding: 10px;
+			height: 65px;
+		}
+		
+		.rodape{
+			width: 50%;
+		}
+		
+		.social{
+			float: right;
+			width: 50%;
+			margin-top: -70px ;
+		}
+
+		/*Fim Rodapé*/
+	</style>
+
+	<body>
+		<header>
+			<div>
+				<div class="casinha">
+					<ul>
+						<li style="list-style-type: none;">
+							<a href="../Início/Início.html">
+								<img src="Images/Casinha.png">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="logo">
+					<img src="Images/Logo.png">
+				</div>
+
+				<div class="produtos">
+					<h1>Testes CCWA</h1>
+				</div>
+			</div>
+		</header>
+
+			<main style="height: 575px;">
+				<div class="everybody">
+					<div class="meio">
+						<img src="Images/Cartão.png" class="cartao">
+
+						<h2>Verifique o ID que contém no cartãozinho de seu último exame, caso você não tenha mas esse cartão entre em contato conosco! Aqui vamos mostar se seu exame está pronto para ser retirado ou ainda está em laboratório.<h2>
+					</div><br><br><br><br><br><br><br><br>
+						
+					<div class ="ident">
+						<form onsubmit="return procurar()">
+							<h4>Digite abaixo o ID de seu exame:</h4>
+			
+							<input type="text" nome="id" id="id" placeholder="Exemplo: 99999" class="ID"><br><br>
+
+							<h4>Selecione o tipo de exame ou teste:</h4>
+
+							<select name="linguagem" required="required" id="teste">
+								<option value="">Selecionar...</option>
+								<option>Covid</option>
+								<option>Sangue</option>
+								<option>Fezes</option>
+								<option>Urina</option>
+								<option>Glicemia</option>
+								<option>Hemograma</option>
+								<option>Colesterol</option>
+							</select><br><br>
+
+							<input value="Pronto" type="submit" onclick="abrirSubTela1(); return false" class="Pronto" id="find">
+						</form><br><br>
+						<div id="redic" class="redic"></div>
+
+					</div>
+				</div>
+
+				<div id="subTela1" style="display: none;">
+					<img src="Images/Logo.png" class="logotreis"><br><br><br>
+					<h3 class="realmente">Teste encontrado</h3><br>
+					<h3 class="realmente">O seu Teste de Covid já está pronto para retirada na nossa clínica de Nova Odessa. Obrigado Pela confiança!</h3><br>
+					<button class="conc" type="button" id="close">Ok</button>
+				</div>
+
+				<div id="subTela2" style="display: none;">
+					<img src="Images/Logo.png" class="logotreis"><br><br><br>
+					<h3 class="realmente">Teste não encontrado</h3><br>
+					<h3 class="realmente">Por favor tente novamente</h3><br><br>
+					<button class="conc" type="button" id="closee">Ok</button>
+				</div>
+            </main>
+
+		<footer>
+			<main>
+				<div id="footer_content">
+					<div class=rodape>
+						<img src="Images/Logo.png" class="logodois">
+					</div>
+
+					<div class="social">
+						<a href="#" class="footer-link" id="instagram">
+							<img src="Images/Instagram.png" class="img">
+						</a>
+						<a href="#" class="footer-link" id="facebook">
+							<img src="Images/Facebook.png" class="img">
+						</a>
+						<a href="#" class="footer-link" id="twitter">
+							<img src="Images/Twitter.png" class="img">
+						</a>
+					</div>
+				</div>
+			</main>
+
+			<div class="copyright">
+				<p>
+					CCWA Medicine © 2023-2023/ CNPJ: 99.999.999/9999-99/ Inscrição Estadual: 99.999.99-9,<br>
+					/ Endereço Rua: Ana Clara Fernades de Oliveira, Bairro das Anas, 30 - 99999-999/ Fale com CCWA</p>
+			</div>
+		</footer>
+	</body>
+
+    <script>
+
+		//Evento para abrir a SubTela1
+		document.getElementById("find").addEventListener("click", function () {
+			abrirSubTela1();
+		});
+
+		//Evento para fechar a SubTela1
+		document.getElementById("close").addEventListener("click", function () {
+			fecharSubTela1();
+		});
+
+		//Evento para fechar a SubTela
+		document.getElementById("closee").addEventListener("click", function () {
+			fecharSubTela2();
+		});
+		
+		function abrirSubTela1(){
+    		var id = document.getElementById('id').value;
+   			var teste = document.getElementById('teste').value;
+
+   			if (id == "12345" && teste == "Covid") {
+        		document.getElementById("subTela1").style.display = "block";
+    		} else {
+        		document.getElementById("subTela2").style.display = "block";
+    		}
+		}
+			
+		function fecharSubTela1() {
+			document.getElementById("subTela1").style.display = "none";
+		}
+
+		function fecharSubTela2() {
+			document.getElementById("subTela2").style.display = "none";
+		}
+	</script>
+</html>
