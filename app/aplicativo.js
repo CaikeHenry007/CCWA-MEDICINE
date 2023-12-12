@@ -215,8 +215,9 @@ app.post('/login', (req, res) => {
   });
 
 app.use(express.static(__dirname + '/assets'));
-app.use(express.static(__dirname + '/Images'));
-
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/views/imagens'));
+app.use(express.static(__dirname +'/ImagensProdutos'));
 
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
