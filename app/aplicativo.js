@@ -34,29 +34,19 @@ app.get('/medicoPage', (req, res) => {
   });
 
   app.get('/adminPage', (req, res) => {
-    const userType = req.session.userType;  // Supondo que você esteja usando sessions para autenticação
+    // Consultas
+    db.query('SELECT * FROM consultas', (errConsultas, resultConsultas) => {
+        if (errConsultas) throw errConsultas;
 
-    // Verifica se o usuário é do tipo admin
-    if (userType === 'admin') {
-        // Consultas
-        db.query('SELECT * FROM consultas', (errConsultas, resultConsultas) => {
-            if (errConsultas) throw errConsultas;
+        // Cadastro
+        db.query('SELECT * FROM cadastro', (errCadastro, resultCadastro) => {
+            if (errCadastro) throw errCadastro;
 
-            // Cadastro
-            db.query('SELECT * FROM cadastro', (errCadastro, resultCadastro) => {
-                if (errCadastro) throw errCadastro;
-
-                // Renderiza a página 'adminPage' com os resultados das consultas e do cadastro
-                res.render('adminPage', { consultas: resultConsultas, cadastro: resultCadastro });
-            });
+            // Renderiza a página 'adminPage' com os resultados das consultas e do cadastro
+            res.render('adminPage', { consultas: resultConsultas, cadastro: resultCadastro });
         });
-    } else {
-        // Se não for do tipo admin, redirecione para uma página de erro ou faça o que for adequado
-        res.status(403).send('Acesso negado. Você não tem permissão para acessar esta página.');
-    }
+    });
 });
-
-    
 
   app.get('/consultas', (req, res) => {
   res.render('consultas'); 
