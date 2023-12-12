@@ -65,6 +65,9 @@
         .login{
         padding: 15px 10px;
         float: right;
+        margin-left: 900px;
+        margin-top: -60px;
+
         }
 
         .linha{
@@ -409,6 +412,26 @@
         margin-top: -80px ;
         }
 
+        #subTela1{
+        border: solid 1px #000000;
+        background-color: #e6e6e6;
+	    width: 100px;
+        height: 100px;
+	    position: absolute;
+	    text-align: center;
+        transform: translate(-50%, -50%);
+        margin-left: 88%;
+        margin-top: 70px;
+	    font-size: 13px;
+        }
+
+        #sair {
+        font-size: 19px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000000;
+        }
+
         /*Ródapé*/
     </style>
 
@@ -427,14 +450,40 @@
                         <p>Bem vindo Usuário!</p>
                     </div>
 
+                    <div id="subTela1" style="display: none;"><br>
+                        <a href="http://localhost:3000/index" id="sair">Logout</a><br>
+                        <h2 id="close">Voltar</h2>
+                    </div>
+
                     <div class="login">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <img src="Login.png" class="cara">
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="casa">
+                            <a id="Relat1">
+                                <img src="imagens/Login.png">
+                            </a>
+                        </div>
+                
+                
+                        <script>
+                            //Evento para abrir a SubTela
+                            document.getElementById("Relat1").addEventListener("click", function () {
+                                abrirSubTela1();
+                            });
+                    
+                            //Evento para fechar a SubTela
+                            document.getElementById("close").addEventListener("click", function () {
+                                fecharSubTela1();
+                            });
+                    
+                            function abrirSubTela1() {
+                                document.getElementById("subTela1").style.display = "block";
+                            }
+                    
+                            function fecharSubTela1() {
+                                document.getElementById("subTela1").style.display = "none";
+                            }
+                        </script>
+                
+                    </div>
                     </div>
                 </div>
             </main>
@@ -446,11 +495,11 @@
                     <div class="itens">
                         <ul>
                             <li>
-                                <a href="">Sobre nós</a>
+                                <a href="http://localhost:3000/sobrenoslogado">Sobre nós</a>
                             </li>
       
                             <li>
-                                <a href="">Produtos</a>
+                                <a href="http://localhost:3000/produtos">Produtos</a>
                             </li>
       
                         </ul>
@@ -558,16 +607,16 @@
             </div>
 
             <div class="botao">
-                <a href="">
+                <a href="http://localhost:3000/planos">
                     <button class="planos" ><img src="Planos.png"><br>Planos de saúde</button>
                 </a>
-                <a href="">
+                <a href="http://localhost:3000/consultas">
                     <button class="agendar"><img src="Consultas.png"><br>Agendar consultas</button>
                 </a>
-                <a href="">
+                <a href="http://localhost:3000/doacoes">
                     <button class="doacoes"><img src="Carteira.png"><br>Doações</button>
                 </a>
-                <a href="">
+                <a href="http://localhost:3000/testes">
                     <button class="verificar"><img src="Testes.png"><br>Verificar testes</button>
                 </a>
             </div>
