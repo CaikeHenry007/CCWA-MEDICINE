@@ -48,10 +48,6 @@ app.get('/medicoPage', (req, res) => {
     });
 });
 
-    
-
-    
-
   app.get('/consultas', (req, res) => {
   res.render('consultas'); 
 });;
@@ -217,9 +213,6 @@ app.post('/login', (req, res) => {
       res.render('adminPage', { cadastro: result });
     });
   });
-
-
-
 
 app.use(express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/Images'));
