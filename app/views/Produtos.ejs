@@ -9,6 +9,222 @@
 		<title>Produtos CCWA</title>
 	</head>
 
+	<style>
+		/*Configurções padrão*/
+	
+	@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+	
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		font-family: Alegreya Sans;
+	}
+	
+	header{
+		margin: 0 auto;
+		  width: 1000px;
+		  height: 175px;
+	}
+	
+	body{
+		background: #8fffbc;
+		background: linear-gradient(180deg, #8fffbc 0%, #ffffff 60%);
+	
+	}
+	main{
+		margin: 0 auto;
+		width: 1200px;
+		position: relative;
+	}
+	
+	footer{
+		margin-top: 500;
+		width: 100%;
+		height: 185px;
+		color:  #000000;
+		background-color: #eaeaea;
+		border: 2px solid #D9D9D9;
+	}
+	
+	/*Fim Configurções padrão*/
+	
+	/*Cabeçalho*/
+	
+	.casinha{
+		width: 7%;
+		position: absolute;
+		padding: 10px 0px;
+		margin-left: -94px;
+	}
+	
+	.logo{
+		width: 10%;
+		position: absolute;
+		margin-left: -22px;
+		padding: 10px 0px;
+	}
+	
+	.produtos{
+		width: 20%;
+		position: absolute;
+		margin-left: 900px;
+		margin-top: 85px;
+	}
+	
+	
+	.orientaçao{
+		padding: 0px 10px 40px;
+	}
+	
+	/*Fim Cabeçalho*/
+	
+	
+	/*Area usável*/
+	
+	.container{
+		height: 1000px;
+		width: 1000px;
+		min-height: 75vh;
+		padding: 10px;
+		margin-left: 485px;
+	}
+	
+	
+	
+	.card{
+		width: 31%;
+		display: inline-block;
+		background: #8fffde;
+		background: linear-gradient(0deg, #8fffde 0%, #ffffff 75%);
+		padding: 10px;
+		border-radius: 15px;
+		box-shadow: #8fffde;
+		font-size: 20px;
+	}
+	
+	.card:hover{
+		background: #82e9ca;
+		background: linear-gradient(0deg, #82e9ca 0%, #fafafa 75%);
+		transform: scale(1.02);
+		transition: all 0.5s;
+	}
+	
+	.remedios{
+		height: 250px;
+	}
+	
+	.btn{
+		border-radius: 15%;
+		text-decoration: none;
+		width: 120px;
+		height: 50px;
+		background-color: #0AD85C;
+		border: none;
+		border-radius: 20px;
+		box-shadow: 5px solid #09c052;
+		font-size: 25px;
+	}
+	
+	.btn:hover{
+		background-color: #09c052;
+		box-shadow: 200px solid #08a747;
+	}
+	
+	/*Fim Area usável*/
+	
+	/*Rodapé*/
+	
+	.img{
+		height: 55px;
+		float: right;
+		padding: 10px;
+	}
+	
+	.copyright{
+		margin-top: 65px;
+		background-color: #D9D9D9;
+		width: 100%;
+		height: 50px;
+		text-align: center;
+	}
+	  
+	.logodois{
+		padding: 10px;
+		height: 65px;
+	}
+	  
+	.rodape{
+		width: 50%;
+	}
+	  
+	.social{
+		float: right;
+		width: 50%;
+		margin-top: -70px ;
+	}
+
+	#subTela1{
+    border-radius: 12px;
+    border: solid 3px #000000;
+	background-image: url(Images/Logo.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+    background-color: #8fffbc;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+	width: 500px;
+    height: 300px;
+	position: absolute;
+	text-align: center;
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+	margin-top: -45%;
+	font-size: 14px;
+	}
+
+	#subTelao1{
+    border-radius: 12px;
+    border: solid 3px #000000;
+	background-image: url(Images/Logo.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+    background-color: #8fffbc;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+	width: 500px;
+    height: 350px;
+	position: absolute;
+	text-align: center;
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+	margin-top: -45%;
+	font-size: 14px;
+	}
+
+	.logotreis {
+		margin-top: 30px;
+		height: 55px;
+	}
+
+	.conc{
+		border: none;
+		background-color: #79e9a4;
+		width: 150px;
+		height: 30px;
+		font-size: 14px;
+		border-radius: 10px;
+	}
+
+	.conc:hover{
+		border: none;
+		background-color: #6ccf92;
+		width: 150px;
+		height: 30px;
+		font-size: 14px;
+		border-radius: 10px;
+	}
+	/*Fim Rodapé*/
+	</style>
+
 	<body>
 		<header>
 			<div>
@@ -16,14 +232,14 @@
 					<ul>
 						<li style="list-style-type: none;">
 							<a href="../Início/Início.html">
-								<img src="Casinha.png">
+								<img src="Images/Casinha.png">
 							</a>
 						</li>
 					</ul>
 				</div>
 
 				<div class="logo">
-					<img src="./ImagensProdutos/Logo.png">
+					<img src="Images/Logo.png">
 				</div>
 
 				<div class="produtos">
@@ -37,73 +253,73 @@
 
 			<div class="card">
 				<div class="product-image" id="img-1">
-					<img src="./ImagensProdutos/Dipirona.png" class="remedios">
+					<img src="Images/Dipirona.png" class="remedios">
 					<h3>Dipirona Sódica 500mg/20ml CCWA Gotas</h3>
 					<p>
 						<s>R$8,90</s><br>
-						<span class="bold">R$39,99</span>
+						<span class="bold">R$5,99</span>
 					</p>
-					<button href="#" class="btn">Comprar</button>
+					<button id="Relat1" class="btn">Comprar</button>
 				</div>
 			</div>
 
 			<div class="card">
 				<div class="product-image" id="img-2">
-					<img src="./ImagensProdutos/Remédio.png" class="remedios">
+					<img src="Images/Remédio.png" class="remedios">
 					<h3>Paracetamol 750mg CCWA 20 Comprimidos</h3>
 					<p>
 						<s>R$8,90</s><br>
-						<span class="bold">R$39,99</span>
+						<span class="bold">R$5,99</span>
 					</p>
-					<button href="#" class="btn">Comprar</button>
+					<button id="Relat2" class="btn">Comprar</button>
 				</div>
 			</div>
 
 			<div class="card">
 				<div class="product-image" id="img-3">
-					<img src="./ImagensProdutos/Dipirona.png" class="remedios">
+					<img src="Images/Dipirona.png" class="remedios">
 					<h3>Dipirona Sódica 500mg/20ml CCWA Gotas</h3>
 					<p>
 						<s>R$8,90</s><br>
-						<span class="bold">R$39,99</span>
+						<span class="bold">R$5,99</span>
 					</p>
-					<button href="#" class="btn">Comprar</button>
+					<button id="Relat3" class="btn">Comprar</button>
 				</div>
 			</div>
 
 			<div class="card">
 				<div class="product-image" id="img-4">
-					<img src="./ImagensProdutos/Remédio.png" class="remedios">
+					<img src="Images/Remédio.png" class="remedios">
 					<h3>Paracetamol 750mg CCWA 20 Comprimidos</h3>
 					<p>
 						<s>R$8,90</s><br>
-						<span class="bold">R$39,99</span>
+						<span class="bold">R$5,99</span>
 					</p>
-					<button href="#" class="btn">Comprar</button>
+					<button id="Relat4" class="btn">Comprar</button>
 				</div>
 			</div>
 
 			<div class="card">
 				<div class="product-image" id="img-5">
-					<img src="./ImagensProdutos/Dipirona.png" class="remedios">
+					<img src="Images/Dipirona.png" class="remedios">
 					<h3>Dipirona Sódica 500mg/20ml CCWA Gotas</h3>
 					<p>
 						<s>R$8,90</s><br>
-						<span class="bold">R$39,99</span>
+						<span class="bold">R$5,99</span>
 					</p>
-					<button href="#" class="btn">Comprar</button>
+					<button id="Relat5" class="btn">Comprar</button>
 				</div>
 			</div>
 
 			<div class="card">
 				<div class="product-image" id="img-9">
-					<img src="./ImagensProdutos/Remédio.png" class="remedios">
+					<img src="Images/Remédio.png" class="remedios">
 					<h3>Paracetamol 750mg CCWA 20 Comprimidos</h3>
 					<p>
 						<s>R$8,90</s><br>
-						<span class="bold">R$39,99</span>
+						<span class="bold">R$5,99</span>
 					</p>
-					<button href="#" class="btn">Comprar</button>
+					<button id="Relat6" class="btn">Comprar</button>
 				</div>
 			</div>
 		</main>
@@ -112,25 +328,102 @@
 			<main>
 				<div id="footer_content">
 					<div class=rodape>
-						<img src="./ImagensProdutos/Logo.png" class="logodois">
+						<img src="Images/Logo.png" class="logodois">
 					</div>
 
 					<div class="social">
 						<a href="#" class="footer-link" id="instagram">
-							<img src="./ImagensProdutos/Instagram.png" class="img">
+							<img src="Images/Instagram.png" class="img">
 						</a>
 						<a href="#" class="footer-link" id="facebook">
-							<img src="./ImagensProdutos/Facebook.png" class="img">
+							<img src="Images/Facebook.png" class="img">
 						</a>
 						<a href="#" class="footer-link" id="twitter">
-							<img src="./ImagensProdutos/Twitter.png" class="img">
+							<img src="Images/Twitter.png" class="img">
 						</a>
 					</div>
 				</div>
+
+				<div id="subTela1" style="display: none;">
+					<img src="Images/Logo.png" class="logotreis"><br><br><br>
+					<h2 class="realmente">Você realmente deseja fazer a compra deste remédio por apenas R$5,99 neste momento?</h2><br><br><br>
+					<button class="conc" type="button" id="close">Cancelar</button>
+					<button class="conc" type="button" id="other">Sim</button>
+				</div>
+
+				<div id="subTelao1" style="display: none;">
+					<img src="Images/Logo.png" class="logotreis"><br><br><br>
+					<h2 class="realmente">Para que você faça a compra de um dos nossos medicamentos pedimos para que você vá ao estabelecimento mais próximo da CCWA Medicine ou entre em contato conosco ligando no telefone: (19) 99999-9999</h2><br><br><br>
+					<button class="conc" type="button" id="closee">Ok</button>
+				</div>
+
+				<script>
+					//Evento para abrir a SubTela
+					document.getElementById("Relat1").addEventListener("click", function () {
+						abrirSubTela1();
+					});
+
+					document.getElementById("Relat2").addEventListener("click", function () {
+						abrirSubTela1();
+					});
+
+					document.getElementById("Relat3").addEventListener("click", function () {
+						abrirSubTela1();
+					});
+
+					document.getElementById("Relat4").addEventListener("click", function () {
+						abrirSubTela1();
+					});
+
+					document.getElementById("Relat5").addEventListener("click", function () {
+						abrirSubTela1();
+					});
+
+					document.getElementById("Relat6").addEventListener("click", function () {
+						abrirSubTela1();
+					});
+			
+			
+					//Evento para fechar a SubTela
+					document.getElementById("close").addEventListener("click", function () {
+						fecharSubTela1();
+					});
+			
+					document.getElementById("other").addEventListener("click", function () {
+						fecharSubTela1();
+					});
+			
+					function abrirSubTela1() {
+						document.getElementById("subTela1").style.display = "block";
+					}
+			
+					function fecharSubTela1() {
+						document.getElementById("subTela1").style.display = "none";
+					}
+			
+					//Telaooo
+			
+					document.getElementById("other").addEventListener("click", function () {
+						abrirSubTelao1();
+					});
+			
+					//Evento para fechar a SubTela
+					document.getElementById("closee").addEventListener("click", function () {
+						fecharSubTelao1();
+					});
+			
+					function abrirSubTelao1() {
+						document.getElementById("subTelao1").style.display = "block";
+					}
+			
+					function fecharSubTelao1() {
+						document.getElementById("subTelao1").style.display = "none";
+					}
+				</script>
 			</main>
 
 			<div class="copyright">
-				<p>
+				<p>S
 					CCWA Medicine © 2023-2023/ CNPJ: 99.999.999/9999-99/ Inscrição Estadual: 99.999.99-9,<br>
 					/ Endereço Rua: Ana Clara Fernades de Oliveira, Bairro das Anas, 30 - 99999-999/ Fale com CCWA</p>
 			</div>
@@ -138,160 +431,3 @@
 	</body>
 </html>
 
-<style>
-	/*Configurções padrão*/
-
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
-
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: Alegreya Sans;
-}
-
-header{
-	margin: 0 auto;
-  	width: 1000px;
-  	height: 175px;
-}
-
-body{
-	background: #8fffbc;
-	background: linear-gradient(180deg, #8fffbc 0%, #ffffff 60%);
-
-}
-main{
-	margin: 0 auto;
-	width: 1200px;
-	position: relative;
-}
-
-footer{
-	margin-top: 500;
-	width: 100%;
-	height: 185px;
-	color:  #000000;
-	background-color: #eaeaea;
-	border: 2px solid #D9D9D9;
-}
-
-/*Fim Configurções padrão*/
-
-/*Cabeçalho*/
-
-.casinha{
-	width: 7%;
-	position: absolute;
-	padding: 10px 0px;
-	margin-left: -94px;
-}
-
-.logo{
-	width: 10%;
-	position: absolute;
-	margin-left: -22px;
-    padding: 10px 0px;
-}
-
-.produtos{
-	width: 20%;
-	position: absolute;
-	margin-left: 900px;
-	margin-top: 85px;
-}
-
-
-.orientaçao{
-	padding: 0px 10px 40px;
-}
-
-/*Fim Cabeçalho*/
-
-
-/*Area usável*/
-
-.container{
-	height: 1000px;
-	width: 1000px;
-	min-height: 75vh;
-	padding: 10px;
-	margin-left: 485px;
-}
-
-
-
-.card{
-	width: 31%;
-	display: inline-block;
-	background: #8fffde;
-	background: linear-gradient(0deg, #8fffde 0%, #ffffff 75%);
-	padding: 10px;
-	border-radius: 15px;
-	box-shadow: #8fffde;
-	font-size: 20px;
-}
-
-.card:hover{
-	background: #82e9ca;
-	background: linear-gradient(0deg, #82e9ca 0%, #fafafa 75%);
-	transform: scale(1.02);
-    transition: all 0.5s;
-}
-
-.remedios{
-	height: 250px;
-}
-
-.btn{
-	border-radius: 15%;
-	text-decoration: none;
-	width: 120px;
-	height: 50px;
-	background-color: #0AD85C;
-	border: none;
-	border-radius: 20px;
-	box-shadow: 5px solid #09c052;
-	font-size: 25px;
-}
-
-.btn:hover{
-	background-color: #09c052;
-	box-shadow: 200px solid #08a747;
-}
-
-/*Fim Area usável*/
-
-/*Rodapé*/
-
-.img{
-	height: 55px;
-	float: right;
-	padding: 10px;
-}
-
-.copyright{
-	margin-top: 65px;
-	background-color: #D9D9D9;
-	width: 100%;
-	height: 50px;
-	text-align: center;
-}
-  
-.logodois{
-	padding: 10px;
-	height: 65px;
-}
-  
-.rodape{
-	width: 50%;
-}
-  
-.social{
-	float: right;
-	width: 50%;
-	margin-top: -70px ;
-}
-
-/*Fim Rodapé*/
-</style>
