@@ -1,21 +1,464 @@
-<!-- views/planos.ejs -->
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planos</title>
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <h1>Planos Disponíveis</h1>
-  <ul>
-    <% for (let i = 0; i < planos.length; i++) { %>
-      <li>
-        <%= planos[i].nome %> - R$ <%= planos[i].preco %>
-      </li>
-    <% } %>
-  </ul>
-</body>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Planos.css">
+		<title>CCWA Medicine</title>
+	</head>
+
+    <style>
+        /*Configurções padrão*/
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Alegreya Sans;
+        }
+
+        header{
+            margin: 0 auto;
+            width: 1000px;
+            height: 175px;
+        }
+
+        body{
+            background-color: #8fffbc;
+            background: -webkit-gradient(linear, left top, left bottom, from(#8BFFBC), to(#ffffff));
+
+        }
+        main{
+            margin: 0 auto;
+            width: 1200px;
+            position: relative;
+        }
+
+        footer{
+            margin-top: 125px;
+            width: 100%;
+            height: 185px;
+            color:  #000000;
+            background-color: #eaeaea;
+            border: 2px solid #D9D9D9;
+        }
+
+        h2{
+            font-size: 35px;
+            color: #868686;
+        }
+
+        h3{
+            color: #868686;
+        }
+
+        /*Fim Configurções padrão*/
+
+        /*Cabeçalho*/
+
+        .casinha{
+            width: 7%;
+            position: absolute;
+            padding: 10px 0px;
+            margin-left: -94px;
+        }
+
+        .logo{
+            width: 10%;
+            position: absolute;
+            margin-left: -22px;
+            padding: 10px 0px;
+        }
+
+        .produtos{
+            width: 20%;
+            position: absolute;
+            margin-left: 900px;
+            margin-top: 85px;
+        }
+
+
+        .orientaçao{
+            padding: 0px 10px 40px;
+        }
+
+        /*Fim Cabeçalho*/
+
+
+        /*Area usável*/
+        .os-dois{
+            padding: 75px 0px;
+            text-align: center;
+        }
+
+        .qual{
+            width: 50%;
+            float: right;
+        }
+
+        .opcoes{
+            border-radius: 20px;
+            width: 40%;
+            display: inline-block;
+            background: #ffffff;
+            background: linear-gradient(0deg, #ffffff 0%, #87f1b2 90%);
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: #8fffde;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .opcoes:hover{
+            border-radius: 20px;
+            background: #82e9ca;
+            background: linear-gradient(0deg, #ffffff 0%, #7fe2a7 50%);
+            transform: scale(1.02);
+            transition: all 0.5s;
+        }
+
+        #opcoes-2{
+            margin-left: 70px;
+        }
+
+        .btn{
+            text-decoration: none;
+            width: 300px;
+            height: 60px;
+            background-color: #0AD85C;
+            border: none;
+            border-radius: 50px;
+            font-size: 35px;
+            color: #ffffff;
+        }
+
+        .btn:hover{
+            background-color: #0ac956;
+        }
+
+        .preco{
+            font-size: 55px;
+            font-weight: bold;
+            color: #0EC055;
+        }
+
+        .bene{
+            font-size: 25px;
+            font-weight: bold;
+            color: #0EC055;
+        }
+
+        #subTela1{
+            border-radius: 12px;
+            border: solid 3px #000000;
+            background-color: #8fffbc;
+            background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+            width: 500px;
+            height: 525px;
+            position: absolute;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            margin-left: 50%;
+            margin-top: -35%;
+            font-size: 14px;
+            }
+
+        #subTela2{
+            border-radius: 12px;
+            border: solid 3px #000000;
+            background-color: #8fffbc;
+            background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+            width: 500px;
+            height: 525px;
+            position: absolute;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            margin-left: 50%;
+            margin-top: -35%;
+            font-size: 14px;
+        }
+            
+        #subTelao1{
+            border-radius: 12px;
+            border: solid 3px #000000;
+            background-color: #8fffbc;
+            background: -webkit-gradient(linear, left top, left bottom, from(#8fffbc), to(#ffffff));
+            width: 500px;
+            height: 350px;
+            position: absolute;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            margin-left: 50%;
+            margin-top: -35%;
+            font-size: 14px;
+            }
+
+            .logotreis {
+                margin-top: 30px;
+                height: 55px;
+            }
+
+            .conc{
+                border: none;
+                background-color: #79e9a4;
+                width: 150px;
+                height: 30px;
+                font-size: 14px;
+                border-radius: 10px;
+            }
+
+            .conc:hover{
+                border: none;
+                background-color: #6ccf92;
+                width: 150px;
+                height: 30px;
+                font-size: 14px;
+                border-radius: 10px;
+            }
+
+            .realmente {
+                font-size: 20px;
+                color: #000000;
+            }
+
+            .benef {
+                text-align: justify;
+                font-size: 20px;
+                color: #000000;
+                width: 450px;
+                margin-left: 25px;
+            }
+
+
+        /*Fim Area usável*/
+
+        /*Rodapé*/
+
+        .img{
+            height: 55px;
+            float: right;
+            padding: 10px;
+        }
+
+        .copyright{
+            margin-top: 65px;
+            background-color: #D9D9D9;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+        }
+        
+        .logodois{
+            padding: 10px;
+            height: 65px;
+        }
+        
+        .rodape{
+            width: 50%;
+        }
+        
+        .social{
+            float: right;
+            width: 50%;
+            margin-top: -70px ;
+        }
+
+        /*Fim Rodapé*/
+    </style>
+
+	<body>
+		<header>
+			<div>
+				<div class="casinha">
+					<ul>
+						<li style="list-style-type: none;">
+							<a href="../Início/Início.html">
+								<img src="Images/Casinha.png">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="logo">
+					<img src="Images/Logo.png">
+				</div>
+
+				<div class="produtos">
+					<h1>Planos CCWA</h1>
+				</div>
+			</div>
+		</header>
+
+			<main style="height: 575px;">
+				<div class="os-dois">
+					<div class="opcoes">
+						<div class="product-image" id="img-1">
+							<div class="magens">
+								<img src="Images/Individual.png">
+							</div>
+
+							<p class="preco">R$300,00/mês</p><br><br><br><br>
+							<p class="bene">Benefícios</p><br>
+							<button href="#" class="btn" id="Relat2">Assinar Plano</button>
+						</div>
+					</div>
+		
+					<div class="opcoes" id="opcoes-2">
+						<div class="product-image" id="img-2">
+							<div class="magens">
+								<img src="Images/Familiar.png">
+							</div>
+
+							<p class="preco">R$700,00/mês</p><br><br><br><br>
+							<p class="bene">Benefícios</p><br>
+							<button href="#" class="btn" id="Relat1">Assinar Plano</button>
+						</div>
+					</div><br><br><br><br><br>
+					
+					<h2>Escolha um plano que deseja assinar</h2>
+					<h3>Não esqueça de conferir os beneficios antes</h3>
+				</div>
+
+                <div id="subTela1" style="display: none;">
+					<img src="Images/Logo.png" class="logotreis"><br><br><br>
+					<h2 class="realmente">Você escolheu: Plano CCWA Familiar</h2><br>
+                    <h2 class="benef">Benefícios:</h2>
+                    <li class="benef">Para até 6 familiares</li>
+                    <li class="benef">Descontos em até 75% em medicamentos nas farmácias;</li>
+                    <li class="benef">Atendimento ilimitado com nutricionistas da rede;</li>
+                    <li class="benef">Consultas com clínicos gerais 24h por dia, em todos os dias da semana.</li><br>
+                    <h2 class="realmente">Você realmente deseja assinar o plano "CCWA Familiar" por apenas R$700,00/mês neste momento?</h2><br><br><br>
+					<button class="conc" type="button" id="close">Cancelar</button>
+					<button class="conc" type="button" id="other">Sim</button>
+				</div>
+
+                <div id="subTela2" style="display: none;">
+					<img src="Images/Logo.png" class="logotreis"><br><br><br>
+					<h2 class="realmente">Você escolheu: Plano CCWA Individual</h2><br>
+                    <h2 class="benef">Benefícios:</h2>
+                    <li class="benef">Para apenas 1 pessoa</li>
+                    <li class="benef">Descontos em até 50% em medicamentos nas farmácias;</li>
+                    <li class="benef">Atendimento limitado com nutricionistas da rede;</li>
+                    <li class="benef">Consultas com clínicos gerais 24h por dia, em todos os dias da semana.</li><br>
+                    <h2 class="realmente">Você realmente deseja assinar o plano "CCWA Individual" por apenas R$300,00/mês neste momento?</h2><br><br><br>
+					<button class="conc" type="button" id="close2">Cancelar</button>
+					<button class="conc" type="button" id="other2">Sim</button>
+				</div>
+
+				<div id="subTelao1" style="display: none;">
+					<img src="Images/Logo.png" class="logotreis"><br><br><br>
+					<h2 class="benef">Para que você consiga assinar qualquer um de nossos planos, pedimos para que você vá ao estabelecimento mais próximo da CCWA Medicine ou entre em contato conosco ligando no telefone: (19) 99999-9999, para maior qualidade de atendimento e melhor coleta de dados.</h2><br><br><br>
+					<button class="conc" type="button" id="closee">Ok</button>
+				</div>
+
+				<script>
+					//Evento para abrir a SubTela
+					document.getElementById("Relat1").addEventListener("click", function () {
+						abrirSubTela1();
+					});
+			
+					//Evento para fechar a SubTela
+					document.getElementById("close").addEventListener("click", function () {
+						fecharSubTela1();
+					});
+			
+					document.getElementById("other").addEventListener("click", function () {
+						fecharSubTela1();
+					});
+			
+					function abrirSubTela1() {
+						document.getElementById("subTela1").style.display = "block";
+					}
+			
+					function fecharSubTela1() {
+						document.getElementById("subTela1").style.display = "none";
+					}
+			
+					//Telaooo
+			
+					document.getElementById("other").addEventListener("click", function () {
+						abrirSubTelao1();
+					});
+			
+					//Evento para fechar a SubTela
+					document.getElementById("closee").addEventListener("click", function () {
+						fecharSubTelao1();
+					});
+			
+					function abrirSubTelao1() {
+						document.getElementById("subTelao1").style.display = "block";
+					}
+			
+					function fecharSubTelao1() {
+						document.getElementById("subTelao1").style.display = "none";
+					}
+
+
+                    //SubTela2
+
+                    //Evento para abrir a SubTela
+					document.getElementById("Relat2").addEventListener("click", function () {
+						abrirSubTela2();
+					});
+			
+					//Evento para fechar a SubTela
+					document.getElementById("close2").addEventListener("click", function () {
+						fecharSubTela2();
+					});
+			
+					document.getElementById("other2").addEventListener("click", function () {
+						fecharSubTela2();
+					});
+			
+					function abrirSubTela2() {
+						document.getElementById("subTela2").style.display = "block";
+					}
+			
+					function fecharSubTela2() {
+						document.getElementById("subTela2").style.display = "none";
+					}
+			
+					//Telaooo
+			
+					document.getElementById("other2").addEventListener("click", function () {
+						abrirSubTelao1();
+					});
+
+				</script>
+
+            </main>
+
+		<footer>
+			<main>
+				<div id="footer_content">
+					<div class=rodape>
+						<img src="Images/Logo.png" class="logodois">
+					</div>
+
+					<div class="social">
+						<a href="#" class="footer-link" id="instagram">
+							<img src="Images/Instagram.png" class="img">
+						</a>
+						<a href="#" class="footer-link" id="facebook">
+							<img src="Images/Facebook.png" class="img">
+						</a>
+						<a href="#" class="footer-link" id="twitter">
+							<img src="Images/Twitter.png" class="img">
+						</a>
+					</div>
+				</div>
+			</main>
+
+			<div class="copyright">
+				<p>
+					CCWA Medicine © 2023-2023/ CNPJ: 99.999.999/9999-99/ Inscrição Estadual: 99.999.99-9,<br>
+					/ Endereço Rua: Ana Clara Fernades de Oliveira, Bairro das Anas, 30 - 99999-999/ Fale com CCWA</p>
+			</div>
+		</footer>
+	</body>
+
+    <script src="./Testes.js"></script>
 </html>
