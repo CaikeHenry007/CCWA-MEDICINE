@@ -6,6 +6,16 @@ const port = 3000;
 
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/assets'));
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/views/imagens'));
+app.use(express.static(__dirname + '/ImagensProdutos'));
+
+app.use(session({
+  secret: 'suaChaveSecreta',
+  resave: true,
+  saveUninitialized: true
+}));
 
 const db = mysql.createConnection({
   host: 'localhost',
@@ -22,33 +32,13 @@ db.connect((err) => {
   }
 });
 
-
 const USER_TYPES = {
   ADMIN: 'admin',
   DOCTOR: 'medico',
   USER: 'user',
 };
 
-
-const checkUserTypeMiddleware = (allowedUserTypes) => {
-  return (req, res, next) => {
-    if (req.session.loggedin) {
-      const userType = req.session.type;
-
-      if (allowedUserTypes.includes(userType)) {
-        // Usuário tem um tipo válido, permitir o acesso à rota
-        return next();
-      }
-    }
-
-    // Usuário não tem uma sessão válida ou o tipo de usuário é inválido
-    res.redirect('acessorestrito');
-  };
-};
-
-
-
-
+// Middleware para verificar se o usuário está autenticado
 const isAuthenticated = (req, res, next) => {
   if (req.session && req.session.isAuthenticated) {
     return next();
@@ -57,8 +47,16 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
+// Middleware para verificar tipos de usuário
+const checkUserTypeMiddleware = (allowedUserTypes) => {
+  return (req, res, next) => {
+    if (req.session && req.session.loggedin && allowedUserTypes.includes(req.session.type)) {
+      return next();
+    }
+    res.redirect('/acessorestrito');
+  };
+};
 
-// Rota para redirecionar para a página 'index' quando acessado o localhost:3000
 app.get('/', (req, res) => {
   res.render('index');
 });
@@ -246,28 +244,26 @@ app.post('/login', (req, res) => {
       const user_id = result[0].user_id;
       const user_type = result[0].user_type;
 
-      const userInfoQuery = 'SELECT * FROM login WHERE user_id = ?';
-      db.query(userInfoQuery, [user_id], (err, result) => {
-        if (err) {
-          res.status(500).send('Erro no servidor ao buscar informações de login');
-        } else {
-          if (user_type === 'admin') {
-            res.redirect('/index3');
-          } else if (user_type === 'user') {
-            res.redirect('/index1');
-          } else if (user_type === 'medico') {
-            // Redireciona o médico diretamente para a página de consultas dele
-            res.redirect('/index2');
-          } else {
-            res.send('Tipo de usuário desconhecido');
-          }
-        }
-      });
+      req.session.isAuthenticated = true;
+      req.session.loggedin = true;
+      req.session.user_id = user_id;
+      req.session.type = user_type;
+
+      if (user_type === 'admin') {
+        res.redirect('/index3');
+      } else if (user_type === 'user') {
+        res.redirect('/index1');
+      } else if (user_type === 'medico') {
+        res.redirect('/index2');
+      } else {
+        res.send('Tipo de usuário desconhecido');
+      }
     } else {
       res.send('Nome de usuário ou senha incorretos ou usuário não cadastrado');
     }
   });
 });
+
 
   // READ
   app.get('/medicoPage', (req, res) => {
