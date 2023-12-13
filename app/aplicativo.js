@@ -72,7 +72,7 @@ app.get('/logout', (req, res) => {
 app.get('/medicoPage', checkUserTypeMiddleware([USER_TYPES.DOCTOR]), (req, res) => {
     db.query('SELECT * FROM consultas', (err, result) => {
       if (err) throw err;
-      res.render('medicoPage', { consultas: result, req: req });
+      res.render('medicoPage', { consultas: result });
     });
   });
 
@@ -86,7 +86,7 @@ app.get('/medicoPage', checkUserTypeMiddleware([USER_TYPES.DOCTOR]), (req, res) 
             if (errCadastro) throw errCadastro;
 
             // Renderiza a página 'adminPage' com os resultados das consultas e do cadastro
-            res.render('adminPage', { consultas: resultConsultas, cadastro: resultCadastro, req:req });
+            res.render('adminPage', { consultas: resultConsultas, cadastro: resultCadastro });
         });
     });
 });
@@ -204,19 +204,24 @@ app.get('/login', (req, res) => {
   res.render('login');
 });
 
+app.get('/adminPage', (req, res) => {
+  res.render('adminPage');
+});
 
 app.get('/userPage', (req, res) => {
   res.render('userPage');
 });
 
-
+app.get('/medicoPage', (req, res) => {
+  res.render('medicoPage');
+});
 
 app.get('/index', (req, res) => {
   res.render('index');
 });
 
 app.get('/index1', checkUserTypeMiddleware([USER_TYPES.USER]), (req, res) => {
-    res.render('index1', { req: req }) ;
+    res.render('index1');
 });
 
 app.get('/index2', (req, res) => {
