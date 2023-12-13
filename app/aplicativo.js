@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mysql = require('mysql2');
+const session = require('express-session');
 const port = 3000;
 
 app.use(express.urlencoded({ extended: false }));
@@ -20,6 +21,7 @@ db.connect((err) => {
     console.log('Conectado ao banco de dados MySQL');
   }
 });
+
 
 const USER_TYPES = {
   ADMIN: 'admin',
@@ -44,6 +46,16 @@ const checkUserTypeMiddleware = (allowedUserTypes) => {
   };
 };
 
+
+
+
+const isAuthenticated = (req, res, next) => {
+  if (req.session && req.session.isAuthenticated) {
+    return next();
+  } else {
+    res.redirect('/login'); // Redireciona para a página de login se não estiver autenticado
+  }
+};
 
 
 // Rota para redirecionar para a página 'index' quando acessado o localhost:3000
@@ -107,9 +119,19 @@ app.get('/consultas', (req, res) => {
     res.render('sobrenoslogado'); 
   });
 
-app.get('/sobrenos', (req, res) => {
-  req.render('sobrenos');  
-});
+  app.get('/about', (req, res) => {
+    res.render('about'); 
+  });
+
+  app.get('/sociels', (req, res) => {
+    res.render('sociels'); 
+  });
+
+  app.get('/sociaislogado', (req, res) => {
+    res.render('sociaislogado'); 
+  });
+
+
 
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
