@@ -61,11 +61,20 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+// Rota para logout
 app.get('/logout', (req, res) => {
-  req.session.destroy(() => {
-    res.redirect('/');
+  // Destruir a sessão para fazer logout
+  req.session.destroy((err) => {
+    if (err) {
+      console.error('Erro ao fazer logout: ' + err);
+      res.status(500).send('Erro no servidor ao fazer logout');
+    } else {
+      // Redirecionar para a página de login após o logout
+      res.redirect('/login');
+    }
   });
 });
+
 
 app.get('/medicoPage', checkUserTypeMiddleware([USER_TYPES.DOCTOR]), (req, res) => {
     db.query('SELECT * FROM consultas', (err, result) => {
@@ -287,6 +296,12 @@ app.post('/login', (req, res) => {
       if (err) throw err;
       const cadastro = Array.isArray(results) ? results  : [];
       res.render('adminPage', { cadastro: result });
+    });
+  });
+
+  app.get('/logout', (req, res) => {
+    req.session.destroy(() => {
+      res.redirect('/');
     });
   });
 
