@@ -60,6 +60,21 @@ app.get('/consultas', (req, res) => {
     res.render('Produtos'); 
   });
 
+  app.get('/doacoes', (req, res) => {
+    res.render('doacoes'); 
+  });
+
+  app.get('/Planos', (req, res) => {
+    res.render('planos'); 
+  });
+
+  app.get('/testes', (req, res) => {
+    res.render('testes'); 
+  });
+
+  app.get('/sobrenoslogado', (req, res) => {
+    res.render('sobrenoslogado'); 
+  });
 
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
