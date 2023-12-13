@@ -21,19 +21,50 @@ db.connect((err) => {
   }
 });
 
+const USER_TYPES = {
+  ADMIN: 'admin',
+  DOCTOR: 'medico',
+  USER: 'user',
+};
+
+
+const checkUserTypeMiddleware = (allowedUserTypes) => {
+  return (req, res, next) => {
+    if (req.session.loggedin) {
+      const userType = req.session.type;
+
+      if (allowedUserTypes.includes(userType)) {
+        // Usuário tem um tipo válido, permitir o acesso à rota
+        return next();
+      }
+    }
+
+    // Usuário não tem uma sessão válida ou o tipo de usuário é inválido
+    res.redirect('acessorestrito');
+  };
+};
+
+
+
 // Rota para redirecionar para a página 'index' quando acessado o localhost:3000
 app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/medicoPage', (req, res) => {
+app.get('/logout', (req, res) => {
+  req.session.destroy(() => {
+    res.redirect('/');
+  });
+});
+
+app.get('/medicoPage', checkUserTypeMiddleware([USER_TYPES.DOCTOR]), (req, res) => {
     db.query('SELECT * FROM consultas', (err, result) => {
       if (err) throw err;
       res.render('medicoPage', { consultas: result });
     });
   });
 
-  app.get('/adminPage', (req, res) => {
+  app.get('/adminPage', checkUserTypeMiddleware([USER_TYPES.ADMIN]), (req, res) => {
     // Consultas
     db.query('SELECT * FROM consultas', (errConsultas, resultConsultas) => {
         if (errConsultas) throw errConsultas;
@@ -163,7 +194,7 @@ app.get('/index', (req, res) => {
   res.render('index');
 });
 
-app.get('/index1', (req, res) => {
+app.get('/index1', checkUserTypeMiddleware([USER_TYPES.USER]), (req, res) => {
     res.render('index1');
 });
 
