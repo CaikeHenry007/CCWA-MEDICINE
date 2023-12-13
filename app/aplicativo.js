@@ -69,14 +69,14 @@ app.get('/logout', (req, res) => {
   });
 });
 
-app.get('/medicoPage', checkUserTypeMiddleware([USER_TYPES.DOCTOR]), { req: req }, (req, res) => {
+app.get('/medicoPage', checkUserTypeMiddleware([USER_TYPES.DOCTOR]), (req, res) => {
     db.query('SELECT * FROM consultas', (err, result) => {
       if (err) throw err;
       res.render('medicoPage', { consultas: result });
     });
   });
 
-  app.get('/adminPage', checkUserTypeMiddleware([USER_TYPES.ADMIN]), { req: req }, (req, res) => {
+  app.get('/adminPage', checkUserTypeMiddleware([USER_TYPES.ADMIN]), (req, res) => {
     // Consultas
     db.query('SELECT * FROM consultas', (errConsultas, resultConsultas) => {
         if (errConsultas) throw errConsultas;
@@ -211,7 +211,7 @@ app.get('/index', (req, res) => {
   res.render('index');
 });
 
-app.get('/index1', checkUserTypeMiddleware([USER_TYPES.USER]), { req: req }, (req, res) => {
+app.get('/index1', checkUserTypeMiddleware([USER_TYPES.USER]), (req, res) => {
     res.render('index1');
 });
 
