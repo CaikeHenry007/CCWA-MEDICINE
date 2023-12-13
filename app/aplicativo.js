@@ -131,6 +131,10 @@ app.get('/consultas', (req, res) => {
     res.render('sociaislogado'); 
   });
 
+  app.get('/faca', (req, res) => {
+    res.render('faca'); 
+  });
+
 
 
 app.post('/consultas', (req, res) => {
