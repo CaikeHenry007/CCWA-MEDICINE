@@ -76,6 +76,10 @@ app.get('/consultas', (req, res) => {
     res.render('sobrenoslogado'); 
   });
 
+app.get('/sobrenos', (req, res) => {
+  req.render('sobrenos');  
+});
+
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
   
@@ -153,6 +157,10 @@ app.get('/userPage', (req, res) => {
 
 app.get('/medicoPage', (req, res) => {
   res.render('medicoPage');
+});
+
+app.get('/index', (req, res) => {
+  res.render('index');
 });
 
 app.get('/index1', (req, res) => {
