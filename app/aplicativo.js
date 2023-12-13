@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mysql = require('mysql2');
+const session = require('express-session');
 const port = 3000;
 
 app.use(express.urlencoded({ extended: false }));
@@ -20,6 +21,14 @@ db.connect((err) => {
     console.log('Conectado ao banco de dados MySQL');
   }
 });
+
+const isAuthenticated = (req, res, next) => {
+  if (req.session && req.session.isAuthenticated) {
+    return next();
+  } else {
+    res.redirect('/login'); // Redireciona para a página de login se não estiver autenticado
+  }
+};
 
 // Rota para redirecionar para a página 'index' quando acessado o localhost:3000
 app.get('/', (req, res) => {
