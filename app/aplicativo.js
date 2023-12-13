@@ -272,7 +272,7 @@ app.post('/login', (req, res) => {
         res.send('Tipo de usuário desconhecido');
       }
     } else {
-      res.send('Nome de usuário ou senha incorretos ou usuário não cadastrado');
+      res.redirect('/senhaerrada');
     }
   });
 });
