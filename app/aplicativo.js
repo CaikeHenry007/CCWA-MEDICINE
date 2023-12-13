@@ -135,6 +135,9 @@ app.get('/consultas', (req, res) => {
     res.render('fazer'); 
   });
 
+  app.get('/Logout', (req, res) => {
+    res.render('Logout'); 
+  });
 
 
 app.post('/consultas', (req, res) => {
