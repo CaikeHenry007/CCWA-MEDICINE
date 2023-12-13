@@ -146,6 +146,10 @@ app.get('/consultas', (req, res) => {
     res.render('Logout'); 
   });
 
+  app.get('/acessorestrito', (req, res) => {
+    res.render('acessorestrito'); 
+  });
+
 
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
@@ -268,7 +272,7 @@ app.post('/login', (req, res) => {
         res.send('Tipo de usuário desconhecido');
       }
     } else {
-      res.send('Nome de usuário ou senha incorretos ou usuário não cadastrado');
+      res.redirect('/senhaerrada');
     }
   });
 });
