@@ -76,9 +76,19 @@ app.get('/consultas', (req, res) => {
     res.render('sobrenoslogado'); 
   });
 
-app.get('/sobrenos', (req, res) => {
-  req.render('sobrenos');  
-});
+  app.get('/about', (req, res) => {
+    res.render('about'); 
+  });
+
+  app.get('/sociels', (req, res) => {
+    res.render('sociels'); 
+  });
+
+  app.get('/sociaislogado', (req, res) => {
+    res.render('sociaislogado'); 
+  });
+
+
 
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
