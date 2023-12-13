@@ -138,6 +138,11 @@ app.get('/consultas', (req, res) => {
     res.render('sociaislogado'); 
   });
 
+  app.get('/Erro', (req, res) => {
+    res.render('Erro'); 
+  });
+
+
   app.get('/fazer', (req, res) => {
     res.render('fazer'); 
   });
@@ -272,7 +277,7 @@ app.post('/login', (req, res) => {
         res.send('Tipo de usuário desconhecido');
       }
     } else {
-      res.redirect('/senhaerrada');
+      res.redirect('/Erro');
     }
   });
 });
