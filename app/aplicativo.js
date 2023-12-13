@@ -146,6 +146,10 @@ app.get('/consultas', (req, res) => {
     res.render('Logout'); 
   });
 
+  app.get('/acessorestrito', (req, res) => {
+    res.render('acessorestrito'); 
+  });
+
 
 app.post('/consultas', (req, res) => {
   const { nome_paciente, data_consulta, hora_consulta, especialista, criado_em } = req.body;
