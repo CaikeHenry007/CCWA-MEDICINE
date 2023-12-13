@@ -204,17 +204,12 @@ app.get('/login', (req, res) => {
   res.render('login');
 });
 
-app.get('/adminPage', (req, res) => {
-  res.render('adminPage');
-});
 
 app.get('/userPage', (req, res) => {
   res.render('userPage');
 });
 
-app.get('/medicoPage', (req, res) => {
-  res.render('medicoPage');
-});
+
 
 app.get('/index', (req, res) => {
   res.render('index');
