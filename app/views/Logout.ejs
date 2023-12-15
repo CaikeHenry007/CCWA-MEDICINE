@@ -41,13 +41,13 @@
         padding: 10px;
     }
 
-    .logo {
-        text-align: center;
-    }
-
     .login {
         font-weight: bold;
         font-size: 30px;
+        text-align: center;
+    }
+
+    .logo {
         text-align: center;
     }
 
@@ -71,7 +71,7 @@
         background-color: #78FFAE;
         font-size: 20px;
         font-weight: bold;
-        margin-left: 480px;
+        margin-left: 338px;
     }
 
     .botprosseguir:hover {
@@ -83,7 +83,35 @@
         background-color: #6fe79f;
         font-size: 20px;
         font-weight: bold;
+        margin-left: 338px;
+    }
+
+    .botlogin {
+        width: 250px;
+        height: 50px;
+        margin-top: 30px;
+        border: none;
+        border-radius: 30px;
+        background-color: #78FFAE;
+        font-size: 20px;
+        font-weight: bold;
         margin-left: 480px;
+        position: absolute;
+        margin-left: 20px;
+    }
+
+    .botlogin:hover {
+        width: 250px;
+        height: 50px;
+        margin-top: 30px;
+        border: none;
+        border-radius: 30px;
+        background-color: #6fe79f;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 480px;
+        position: absolute;
+        margin-left: 20px;
     }
 
 </style>
@@ -91,11 +119,6 @@
 <body>
     <header>
         <div class="casa">
-            <ul>
-                <a href="http://10.144.166.92:3000">
-                    <img src="Casinha.png">
-                </a>
-            </ul>
         </div><br><br>
     </header><br><br><br><br><br>
 
@@ -105,19 +128,22 @@
         </div><br><br><br>
 
         <div>
-            <h1>Ops... ainda não temos redes sociais</h1>
+            <h1>Sessão encerrada</h1>
         </div><br><br>
         <div>
-            <h2>Mais em breve teremos</h1>
-        </div><br><br><br><br>
+            <h2>Você saiu da sessão</h1>
+        </div><br><br>
 
         <div>
-            <img src="Sociais.png" style="margin-left: 425px;">
+            <img src="Logoutzao.png" style="margin-left: 545px;">
         </div>
 
-        <a href="http://10.144.166.92:3000/index1">
-            <button class="botprosseguir">Voltar</button>
-        </a>
+        <div>
+            <a href="http://10.144.166.92:3000"><button class="botprosseguir">Tela inicial</button></a>
+            <a href="http://10.144.166.92:3000/login"><button class="botlogin">Login</button></a>
+        </div>
+
+        
     </main>
 
 </body>
