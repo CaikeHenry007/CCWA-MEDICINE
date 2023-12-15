@@ -147,10 +147,6 @@ app.get('/consultas', (req, res) => {
     res.render('fazer'); 
   });
 
-  app.get('/Logout', (req, res) => {
-    res.render('Logout'); 
-  });
-
   app.get('/acessorestrito', (req, res) => {
     res.render('acessorestrito'); 
   });
