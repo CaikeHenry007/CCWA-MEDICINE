@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `cadastro`
 --
 
-CREATE TABLE `cadastro` (
+CREATE TABLE `mydb`.`cadastro` (
   `user_id` int NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -52,7 +52,7 @@ INSERT INTO `cadastro` (`user_id`, `username`, `password`, `cpf`, `telefone`, `e
 -- Estrutura da tabela `consultas`
 --
 
-CREATE TABLE `consultas` (
+CREATE TABLE `mydb`.`consultas` (
   `consulta_id` int NOT NULL,
   `nome_paciente` varchar(255) NOT NULL,
   `data_consulta` date NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE `consultas` (
 -- Estrutura da tabela `login`
 --
 
-CREATE TABLE `login` (
+CREATE TABLE `mydb`.`login` (
   `login_id` int NOT NULL,
   `user_id` int NOT NULL,
   `last_login` datetime NOT NULL
